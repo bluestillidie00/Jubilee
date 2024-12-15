@@ -23,13 +23,13 @@
 		<translation id="title" type="use" value="Archetypes"/>
 		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
 
-		<!-- DNA-->
+		<!-- DNA
 		<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/archetypes/selector" id="mdna">
 			<record id="object_property" get_property="Pigo" set_property="hidn"/>
-		</widget>
+		</widget> -->
 	
 		<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/attanal2" id="AttA">
-			<record id="object_property" get_property="Pigo" set_property="Shwn"/>
+<record id="object_property" get_property="objt" set_property="objt"/>
 		</widget>
 
 

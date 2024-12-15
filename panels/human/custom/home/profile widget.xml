@@ -71,20 +71,6 @@
 			<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
 
 			<!-- NAME -->
-			<container class="tcs_table">
-				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
-
-				<!-- LABEL -->
-				<widget class="label" font="label" alignment="left,centre_y" auto_size="horizontal">
-					<record id="object_property" get_property="dref" name="true"/>
-				</widget>
-
-				<widget class="person_button" alignment="right,centre_y" colour="fg">
-					<record id="object_property" get_property="dref"/>
-				</widget>
-			</container>
-
-			<!-- NAME -->
 			<container class="tcs_table_trans">
 				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
 

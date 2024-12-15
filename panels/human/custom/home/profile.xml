@@ -162,7 +162,7 @@
 				</container>
 			</container>
 
-			<container class="tcs_box" height="480">
+			<container class="tcs_box" height="440">
 				<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
 
 				<widget class="client_object_viewer_xml_panel" id="huPo" file="human/custom/home/profile widget">
