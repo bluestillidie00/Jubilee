@@ -1,0 +1,9 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<!-- POSITION -->
+	<widget class="personality_label" alignment="centre,can_scale" auto_size="vertical" wants_mouse_events="false" colour="faded text">
+		<record id="object_property" get_property="PPst"/>
+	</widget>
+
+</panel>

@@ -1,0 +1,86 @@
+<panel navigation_container="true">
+	<container id="SUBP">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</container>
+
+	<widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="tcs/icons/interface/selector" red_replacement="secondary" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="8,10"/>
+	</widget>
+
+	<record id="default_properties" late_loading="true"/>
+
+	<!-- POLYGONS -->
+	<!-- DNA -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/xlarge/dna" id="dnaA">
+		<translation id="title" value="DNA" type="use"/>
+		<translation id="subtitle" value="Polygon" type="use"/>
+	</widget>
+
+	<!-- SET PIECES -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/xlarge/setpieces" id="pSPe">
+		<translation id="title" translation_id="468242" type="use"/>
+		<translation id="subtitle" value="Polygon" type="use"/>
+	</widget>
+	<!-- END OF POLYGONS -->
+
+	<!-- PLAYING HISTORY -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/xlarge/history" id="hist">
+		<translation id="title" translation_id="513602" type="use"/>
+	</widget>
+
+	<!-- PLAYER PERFORMANCE -->
+	<widget class="player_scout_reports_panel" id="sSRe" late_loading="true" file="player/tcs/overview/main/selectors/big/player_perf">
+		<translation id="title" translation_id="491844" type="use"/>
+	</widget>
+
+	<!-- REPORTS -->
+	<widget class="client_object_viewer_xml_panel" file="none" id="Repo">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+		<translation id="title" translation_id="254774" type="use"/>
+
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<widget class="player_scout_reports_panel" file="player/tcs/overview/main/selectors/reports/overview" id="reOv">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<translation id="title" translation_id="450832" type="use"/>
+		</widget>
+		<widget class="player_scout_reports_panel" file="player/tcs/overview/main/selectors/reports/pc text" id="prct">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+			<translation id="title" value="Pros and Cons (List)" type="use"/>
+		</widget>
+	</widget>
+
+	<!-- MUSTERMANN STATS -->
+	<!--STATS 90-->
+	<container class="client_object_viewer_xml_panel" file="player/mustermann/overview/performance stats" id="mmsc">
+		<translation id="title" type="use" translation_id="284365" value="Stats"/>
+		<translation id="subtitle" type="use" value="Mustermann Panels"/>
+	</container>
+
+	<!--FORM-->
+	<widget class="client_object_viewer_xml_panel" id="Pfor" file="player/mustermann/overview/performance form">
+		<translation id="title" translation_id="248421" type="use" value="Form"/>
+		<translation id="subtitle" type="use" value="Mustermann Panels"/>
+	</widget>
+
+	<!--PIZZA OVERLAY-->
+	<container class="client_object_viewer_xml_panel" file="player/mustermann/overview/performance pizza" id="mmpo">
+		<translation id="title" type="use" value="Pizza"/>
+		<translation id="subtitle" type="use" value="Mustermann Panels"/>
+	</container>
+
+	<!--BAR OVERLAY-->
+	<container class="client_object_viewer_xml_panel" file="player/mustermann/overview/performance bar" id="mmbo">
+		<translation id="title" type="use" value="Bar"/>
+		<translation id="subtitle" type="use" value="Mustermann Panels"/>
+	</container>
+
+	<!--NIPPLE OVERLAY-->
+	<container class="client_object_viewer_xml_panel" file="player/mustermann/overview/performance nipple" id="mmno">
+		<translation id="title" type="use" value="Pasty"/>
+		<translation id="subtitle" type="use" value="Mustermann Panels"/>
+	</container>
+	<!-- END OF MUSTERMANN STATS -->
+
+</panel>

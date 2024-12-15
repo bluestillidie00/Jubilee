@@ -1,0 +1,161 @@
+<panel>
+    <real id="segment_count" value="100" />
+    <boolean id="show_inaccurate_category" value="true" />
+    <!-- Scale the polygon to fit the widget and draw it in code -->
+    <boolean id="scale_picture" value="true" />
+    <boolean id="fill_polygon" value="true" alpha="0" />
+
+    <!-- First layer colour-->
+    <record id="line_style">
+        <colour id="colour" name="tcs_accent" />
+        <integer id="alpha" value="70" />
+        <real id="width" value="2.0" />
+    </record>
+    <!-- Second layer colour-->
+    <record id="second_colour">
+        <colour id="colour" name="fg accent" />
+        <real id="width" value="2" />
+    </record>
+
+    <!-- Radial lines dividing each segment -->
+    <record id="segment_divider_line_props">
+        <colour id="colour" red="100" green="100" blue="60" alpha="10" />
+        <real id="width" value="1.5" />
+    </record>
+    <!-- Style of the line around the edge of the polygon -->
+    <record id="polygon_edge_line_props">
+        <colour id="colour" name="text" />
+        <real id="width" value="0.1" />
+    </record>
+    <!-- Colours (and number) of the concentric polygon rings -->
+    <list id="ring_colours">
+        <colour red="100" green="100" blue="120" alpha="100"/>
+        <colour red="100" green="100" blue="120" alpha="90"/>
+        <colour red="100" green="100" blue="120" alpha="80"/>
+        <colour red="100" green="100" blue="120" alpha="60"/>
+        <colour red="100" green="100" blue="120" alpha="50"/>
+    </list>
+
+    <list id="items">
+        <!-- layer 1 (there is only one) -->
+        <list>
+            <!-- TACKLING -->
+            <record id="item">
+                <translation id="name" value="Tackling" type="use" />
+                <translation id="hint" value="Anticipation&#10;Concentration&#10;Decisions&#10;Tackling" type="use" />
+                <real id="max_value" value="20" />
+                <integer id="angle" value="30" />
+                <colour id="colour" name="text" />
+                <flags id="standard_spec" value="text" />
+                <flags id="size" value="small" />
+
+                <list id="attributes">
+                    <integer value="Ptac" />
+                    <integer value="Pant" />
+                    <integer value="Pcnt" />
+                    <integer value="Pdec" />
+                </list>
+            </record>
+
+            <!-- BALL PLAYING -->
+            <record id="item">
+                <translation id="name" value="Ball Playing" type="use" />
+                <translation id="hint" value="Decisions&#10;Passing&#10;Techique&#10;Tackling&#10;Vision" type="use" />
+                <real id="max_value" value="20" />
+                <integer id="angle" value="90" />
+                <colour id="colour" name="text" />
+                <flags id="standard_spec" value="text" />
+                <flags id="size" value="small" />
+
+                <list id="attributes">
+                    <integer value="Ppas" />
+                    <integer value="Pcre" />
+                    <integer value="Pdec" />
+                    <integer value="Ptec" />
+                    <integer value="Pcmp" />
+                </list>
+            </record>
+
+            <!-- AERIAL -->
+            <record id="item">
+                <translation id="name" value="Aerial" type="use" />
+                <translation id="hint" value="Anticipation&#10;Bravery&#10;Concentration&#10;Decisions&#10;Heading&#10;Jumping&#10;Marking&#10;Strength" type="use" />
+                <real id="max_value" value="20" />
+                <integer id="angle" value="150" />
+                <colour id="colour" name="text" />
+                <flags id="standard_spec" value="text" />
+                <flags id="size" value="small" />
+
+                <list id="attributes">
+                    <integer value="Phea" />
+                    <integer value="Pjum" />
+                    <integer value="Pstr" />
+                    <integer value="Pant" />
+                    <integer value="Pbra" />
+                    <integer value="Pcnt" />
+                    <integer value="Pdec" />
+                    <integer value="Pmar" />
+                    <!-- flair -->
+                </list>
+            </record>
+
+            <!-- HOLD UP PLAY -->
+            <record id="item">
+                <translation id="name" type="use" value="Physical" />
+                <translation id="hint" type="use" value="Agility&#10;Balance&#10;Jumping Reach&#10;Natural Fitness&#10;Stamina&#10;Strength" />
+                <real id="max_value" value="20" />
+                <integer id="angle" value="210" />
+                <colour id="colour" name="text" />
+                <flags id="standard_spec" value="text" />
+                <flags id="size" value="small" />
+
+                <list id="attributes">
+                    <integer value="Pagi" />
+                    <integer value="Pstr" />
+                    <integer value="Psta" />
+                    <integer value="Pjum" />
+                    <integer value="Pnft" />
+                    <integer value="Pbal" />
+                </list>
+            </record>
+
+            <!-- MOVEMENT -->
+            <record id="item">
+                <translation id="name" value="Intelligence" type="use"/>
+                <translation id="hint" value="Anticipation&#10;Composure&#10;Concentration&#10;Decisions&#10;Determination&#10;Vision&#10;Work Rate" type="use"/>
+                <real id="max_value" value="20" />
+                <integer id="angle" value="270" />
+                <colour id="colour" name="text" />
+                <flags id="standard_spec" value="text" />
+                <flags id="size" value="small" />
+
+                <list id="attributes">
+                    <integer value="Pant" />
+                    <integer value="Pcnt" />
+                    <integer value="Pdec" />
+                    <integer value="Pcmp" />
+                    <integer value="Pcre" />
+                    <integer value="Ptwr" />
+                    <integer value="Pdet" />
+                </list>
+            </record>
+
+            <!-- ANTICIPATION -->
+            <record id="item">
+                <translation id="name" value="Speed" type="use" />
+                <translation id="hint" value="Acceleration&#10;Pace" type="use" />
+                <real id="max_value" value="20" />
+                <integer id="angle" value="335" />
+                <colour id="colour" name="text" />
+                <flags id="standard_spec" value="text" />
+                <flags id="size" value="small" />
+
+                <list id="attributes">
+                    <integer value="Ppac" />
+                    <integer value="Pacc" />
+                </list>
+            </record>
+        </list>
+    </list>
+    <!-- outfield analyser panel -->
+</panel>

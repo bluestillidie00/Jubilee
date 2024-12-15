@@ -1,0 +1,73 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="standard_popup_box">
+		<layout class="horizontal_arrange" horizontal_layout="-4,-3" horizontal_gap="8"/>
+
+		<container class="tcs_subtle_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+			<!-- TABBED CONTAINER -->
+			<container class="tcs_tabs" save_session_state="true" default_item="land">
+		
+				<!-- COMPETITIONS -->
+				<widget class="team_container_records_competitions_panel" id="cmps">
+					<translation id="title" translation_id="227741" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			
+				<!-- LANDMARKS -->
+				<widget class="team_container_records_landmarks_panel" id="land">
+					<translation id="title" translation_id="248354" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+		
+				<!-- MANAGERS -->
+				<widget class="team_container_manager_history_panel" id="mana">
+					<translation id="title" translation_id="335174" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+				
+				<!-- RECORDS -->
+				<widget class="club_records_master_panel" id="reco">
+					<translation id="title" translation_id="243323" type="use"/>
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+		</container>
+
+		<container>
+			<layout class="vertical_arrange" vertical_layout="-1,220, 250" vertical_gap="8"/>
+		
+			<!-- LEAGUE HISTORY -->
+			<container class="tcs_subtle_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="319446" type="use"/>
+	
+				<widget class="club_league_history_graph" id="clhg" file="club/tcs/overview/header/league history" section="cmps">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+			<!-- BIOGRAPHY -->
+			<container class="tcs_subtle_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]"/>
+				<widget class="team_container_information_background_panel" id="Cbac" section="NRec">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+
+			<!-- TROPHIES -->
+			<container class="tcs_subtle_box">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				<translation id="title" translation_id="321147" type="use"/>
+
+				<widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/tcs/overview/header/trophies widget" file="club/tcs/overview/header/trophies" section="trov">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+			</container>
+		</container>
+	</container>
+
+</panel>

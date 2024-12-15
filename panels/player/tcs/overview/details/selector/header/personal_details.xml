@@ -1,0 +1,143 @@
+<panel draw_horizontal_dividers="true">
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<!-- CONTENT -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<!-- HEADER -->
+		<container height="18">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" section="Ppin" auto_size="all">
+				<translation id="text" type="use" translation_id="247436" />
+			</widget>
+
+			<widget class="spacer" height="3" />
+		</container>
+
+		<!-- CONTENT -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+			<!-- TOP ROW -->
+			<container class="tcs_table">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+				<!-- DATE OF BIRTH LABEL -->
+				<widget class="label" font="label" auto_size="horizontal">
+					<translation id="text" translation_id="230147" type="use" />
+				</widget>
+
+				<!-- AGE AND DATE OF BIRTH -->
+				<container >
+					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+					<record id="default_properties" alignment="right,centre_y"/>
+
+					<!-- AGE YEARS OLD -->
+					<widget class="formatted_label">
+						<record id="object_property" get_property="Page" />
+						<translation id="format" translation_id="242551" type="use" value="[%number#1] years old" />
+					</widget>
+
+					<!-- DATE OF BIRTH -->
+					<widget class="game_formatted_label" format="([%date#1-short])" colour="faded text">
+						<record id="object_property" get_property="Pdob" />
+					</widget>
+				</container>
+			</container>
+
+			<!-- 2ND ROW -->
+			<container class="tcs_table_trans">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+				<!-- NATIONALITY LABEL -->
+				<widget class="label" font="label" auto_size="horizontal">
+					<translation id="text" translation_id="227841" type="use" />
+				</widget>
+
+				<container >
+					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+					<record id="default_properties" alignment="right,centre_y"/>
+
+					<!-- NATIONALITY -->
+					<widget class="nation_button"  format="[%nation#1-nationality]">
+						<record id="object_property" get_property="Pnat" />
+					</widget>
+
+					<!-- CITY -->
+					<widget class="client_object_label" colour="faded text">
+						<record id="object_property" get_property="Pcob" />
+					</widget>
+				</container>
+			</container>
+
+			<!-- 3RD ROW -->
+			<container class="tcs_table">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+				<!-- INTERNATIONAL RECORD  -->
+				<widget class="label" font="label" auto_size="horizontal">
+					<translation id="text" translation_id="447587" type="use" />
+				</widget>
+
+				<container >
+					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+					<record id="default_properties" alignment="right,centre_y"/>
+
+					<!-- INT CAPS -->
+					<widget class="international_appearances_label" id="inta">
+						<integer id="int_apps_label_format" value="8" />
+						<record id="object_property" dont_set_hint="true" get_property="Pist" />
+					</widget>
+
+					<!-- YOUTH CAPS -->
+					<widget class="international_appearances_label" id="inty" colour="faded text">
+						<integer id="int_apps_label_format" value="9" />
+						<record id="object_property" dont_set_hint="true" get_property="Pist" />
+					</widget>
+				</container>
+			</container>
+
+			<!-- 4TH ROW -->
+			<container class="tcs_table_trans">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+				<!-- REPUTATION -->
+				<widget class="label" font="label" auto_size="horizontal">
+					<translation id="text" translation_id="227963" type="use" />
+				</widget>
+
+				<!-- AGE AND DATE OF BIRTH -->
+				<container >
+					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+					<record id="default_properties" alignment="right,centre_y"/>
+
+					<!-- AGE YEARS OLD -->
+					<widget class="global_reputation_stars_label">
+						<record id="object_property" get_property="Prsa" />
+					</widget>
+
+					<!-- AGE YEARS OLD -->
+					<widget class="personality_label" colour="faded text">
+						<record id="object_property" get_property="PPst" />
+					</widget>
+				</container>
+			</container>
+		</container>
+	</container>
+
+	<!-- EXTRA DETAILS -->
+	<widget class="player_extra_details_text" size="small" alignment="centre" multiline="false" height="14" colour="faded text" auto_size="vertical">
+		<record id="object_property" get_property="PExD" />
+	</widget>
+
+</panel>

@@ -1,0 +1,10 @@
+﻿<panel>
+	<list id="properties_to_forward">
+		<record get_property="PsCT" set_property="PsCT" target="Ppos"/>
+		<record get_property="PPlS" set_property="PPlS" target="Ppos"/>
+	</list>
+	<boolean id="save_session_state" value="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,4,0" />
+
+
+</panel>

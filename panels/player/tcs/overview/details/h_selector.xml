@@ -1,0 +1,80 @@
+<panel navigation_container="true" dont_set_embedded_title="true" >
+	<container id="SUBP" class="tcs_box" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<widget class="popup_button" id="popv" height="30" width="30" click_event="msis" appearance="buttons/custom/over state only/button" fixed="true" rrep="tcs_accent">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="12,8" />
+	</widget>
+
+	<record id="default_properties" late_loading="true"/>
+
+	<!-- ATTRIBUTE ANALYSIS -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/details/selector/header/attanal" id="AttA" >
+		<translation id="title" translation_id="334971" type="use"  />
+		<translation id="subtitle" value="Polygon" type="use"  />
+	</widget>
+
+	<!-- CAREER STATS -->
+	<widget class="playing_history_summary_panel" file="player/playing history summary small" id="Pcrs" >
+		<translation id="title" translation_id="247605" type="use"  />
+	</widget>
+
+	<!-- DNA -->
+	<widget class="person_attributes_analyser_panel" file="player/tcs/overview/details/selector/header/dna" id="dnaA" >
+		<translation id="title" value="DNA" type="use"  />
+		<translation id="subtitle" value="Polygon" type="use"  />
+	</widget>
+
+	<!-- ELIGIBILTY -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/details/selector/header/eligbility" id="elig" >
+		<translation id="title" translation_id="260816" type="use" />
+	</widget>
+
+	<!-- PERSONAL DETAILS -->
+	<widget class="player_personal_details_panel" file="player/tcs/overview/details/selector/header/personal_details" id="pede" >
+		<translation id="title" translation_id="247436" type="use" />
+	</widget>
+
+	<!-- PLAYING TIME -->
+	<widget class="person_chemistry_relationship_panel" id="PlaT" file="player/tcs/overview/details/selector/header/playing_time" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="title" translation_id="491902" type="use" />
+	</widget>
+
+	<!-- RECENT FORM -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/details/selector/header/form" id="form" >
+		<translation id="title" translation_id="421076" type="use" />
+	</widget>
+
+	<!-- RELATIONSHIP WITH YOU -->
+	<widget class="person_chemistry_relationship_panel" id="Prel" file="player/tcs/overview/details/selector/header/relationship_with_you"> 
+		<translation id="title" translation_id="243508" type="use" />
+	</widget>
+
+	<!-- PLAYER REPORT -->
+	<widget class="player_scout_reports_panel" file="player/tcs/overview/details/selector/header/report" id="Pccr" >
+		<translation id="title" translation_id="491843" type="use" />
+	</widget>
+
+	<!-- PLAYER REPORT -->
+	<widget class="player_scout_reports_panel" file="player/tcs/overview/details/selector/header/pc icons" id="PrCo" >
+		<translation id="title" value="Pros and Cons" type="use" />
+	</widget>
+
+	<!-- PLAYER REPORT -->
+	<widget class="player_scout_reports_panel" file="player/tcs/overview/details/selector/header/comparison" id="SqCm" >
+		<translation id="title" value="Squad Comparison" type="use" />
+	</widget>
+
+	<!-- SET PIECES -->
+	<widget class="person_attributes_analyser_panel" file="player/tcs/overview/details/selector/header/setpieces" id="pSPe" >
+		<translation id="title" translation_id="468242" type="use" />
+		<translation id="subtitle" value="Polygon" type="use"  />
+	</widget>
+
+	<!-- TRANSFER STATUS -->
+	<widget class="player_transfer_information_panel" file="player/tcs/overview/details/selector/header/transfer_details" id="Ptin" >
+		<translation id="title" translation_id="227953" type="use" />
+	</widget>
+</panel>

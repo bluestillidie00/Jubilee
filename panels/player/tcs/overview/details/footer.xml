@@ -1,0 +1,96 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="fill" />
+
+	<!-- MORALE -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2"/>
+
+		<widget class="morale_label" alignment="centre_x,bottom" colour="secondary" icon_enabled="false" icon_alignment="left,bottom">
+			<record id="object_property" get_property="Pmor"/>
+		</widget>
+
+		<widget class="text" font="title" colour="secondary" size="small" alignment="centre_x,top">
+			<translation id="text" translation_id="227839" type="use" />
+		</widget>	
+	</container>
+
+	<!-- AGREED PLAYING TIME -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2"/>
+
+		<widget class="playing_time_label" alignment="centre_x,bottom" icon_alignment="centre" colour="secondary" show_no_form_on_empty="true">
+			<record id="object_property" get_property="Pcpt"/>
+		</widget>
+
+		<widget class="text" font="title" colour="secondary" size="small" alignment="centre_x,top">
+			<translation id="text" translation_id="492002" type="use" />
+		</widget>	
+	</container>
+
+	<!-- ACTUAL PLAYING TIME -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2"/>
+
+		<widget class="playing_time_label" alignment="centre_x,bottom" icon_alignment="centre" colour="secondary" show_no_form_on_empty="true">
+			<record id="object_property" get_property="Pctp"/>
+		</widget>
+
+		<widget class="text" font="title" colour="secondary" size="small" alignment="centre_x,top">
+			<translation id="text" translation_id="492001" type="use" />
+		</widget>	
+	</container>
+
+	<!-- ACTUAL PLAYING TIME -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" horizontal_inset="40"/>
+
+		<widget class="form_graph_panel" alignment="centre_x,bottom" icon_alignment="centre" colour="secondary" show_no_form_on_empty="true">
+			<record id="object_property" get_property="Pfrm"/>
+		</widget>
+
+		<widget class="text" font="title" colour="secondary" size="small" alignment="centre_x,top">
+			<translation id="text" translation_id="276271" type="use" />
+		</widget>	
+	</container>
+
+
+	<!-- SQUAD CHARACTER -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2"/>
+
+		<widget class="date_cell" alignment="centre_x,bottom" colour="secondary">
+			<record id="object_property" get_property="PcSd"/>
+		</widget>
+
+		<widget class="text" font="title" colour="secondary" size="small" alignment="centre_x,top">
+			<translation id="text" translation_id="308176" type="use" />
+		</widget>	
+	</container>
+
+	<!-- MANAGER SUPPORT 
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2"/>
+
+		<widget class="contract_expiry_button" alignment="centre_x,bottom" colour="secondary">
+			<record id="object_property" get_property="Pced"/>
+		</widget>
+
+		<widget class="text" font="title" colour="secondary" size="small" alignment="centre_x,top">
+			<translation id="text" translation_id="247488" type="use" />
+		</widget>	
+	</container>-->
+
+	<!-- EXPECTED POSITION  -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2"/>
+
+		<widget class="club_button" alignment="centre_x,bottom" colour="secondary" icon_enabled="false" icon_alignment="left,bottom">
+			<record id="object_property" get_property="Plcl"/>
+		</widget>
+
+		<widget class="text" font="title" colour="secondary" size="small" alignment="centre_x,top">
+			<translation id="text" translation_id="308170" type="use" />
+		</widget>	
+	</container>
+
+</panel>

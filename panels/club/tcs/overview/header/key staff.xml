@@ -1,0 +1,76 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<!-- CONTENT -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+		<!-- TOP ROW -->
+		<container class="tcs_table">
+			<layout class="horizontal_arrange" horizontal_layout="70,-1"  />
+
+			<!-- NICKNAME LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="TMnR" name="true" />
+			</widget>
+
+			<widget class="person_snapshot_club_overview_panel" id="mana" player="false" file="club/tcs/overview/header/snapshots/manager">
+				<record id="object_property">
+					<integer id="get_property" value="TMnR" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- 2ND ROW -->
+		<container class="tcs_table_trans">
+			<layout class="horizontal_arrange" horizontal_layout="70,-1"  />
+			<!-- DATE OF BIRTH LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="TCap" name="true" />
+			</widget>
+
+			<!-- DATE OF BIRTH -->
+			<widget class="person_snapshot_club_overview_panel" id="capt" player="true" file="club/tcs/overview/header/snapshots/captain">
+				<record id="object_property">
+					<integer id="get_property" value="TCap" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- 3RD ROW -->
+		<container class="tcs_table">
+			<layout class="horizontal_arrange" horizontal_layout="70,-1"  />
+			<!-- NATION LOGO  -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="TVca" name="true" />
+			</widget>
+
+			<!-- CITY -->
+			<widget class="person_snapshot_club_overview_panel" id="vice" player="true" file="club/tcs/overview/header/snapshots/captain">
+				<record id="object_property">
+					<integer id="get_property" value="TVca" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- 4TH ROW -->
+		<container class="tcs_table_trans">
+			<layout class="horizontal_arrange" horizontal_layout="70,-1"  />
+			<!-- REPUTATION -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<translation id="text" translation_id="227396" type="use" value="Key Player" />
+			</widget>
+
+			<widget class="person_snapshot_club_overview_panel" id="KeyP" player="true" file="club/tcs/overview/header/snapshots/key player">
+				<record id="object_property">
+					<integer id="get_property" value="TKpL" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,13 @@
+<class class="tcs_header" parent="link_button">
+    <flags id="appearance" value="tcs/buttons/selector/button"/>
+    <flags id="auto_size" value="vertical"/>
+    <flags id="alignment" value="top,centre_x" />
+    <flags id="red_replacement" value="primary"/>
+    <flags id="style" value="bold"/>
+    <flags id="colour" value="secondary"/>
+
+    <!-- HEADER 
+	<widget class="link_button" section="Pccr" auto_size="vertical" alignment="top,centre_x" appearance="tcs/buttons/selector/button" red_replacement="primary" style="bold" colour="secondary">
+		<translation id="text" type="use" translation_id="420686" />
+	</widget> -->
+</class>

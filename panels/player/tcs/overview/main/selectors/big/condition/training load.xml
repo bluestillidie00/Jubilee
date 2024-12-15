@@ -1,0 +1,15 @@
+﻿<panel>
+  <list id="properties_to_forward">
+    <record get_property="PTWl" set_property="text" target="WlTx"/>
+    <record get_property="TLTc" set_property="colour" target="WlTx"/>
+    <record get_property="TrWT" set_property="text" target="WlDe"/>
+  </list>
+
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+    <!-- value -->
+    <widget class="text" id="WlTx" auto_size="vertical" style="bold" size="large"/>
+
+    <!-- description -->
+    <widget class="text" id="WlDe" alignment="left,top" auto_size="vertical" size="small" colour="faded text" multiline="true"/>
+</panel>

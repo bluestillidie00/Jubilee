@@ -1,0 +1,117 @@
+<panel>
+	<layout class="vertical_arrange" vertical_layout="-11,420" vertical_gap="8"/>
+
+	<container >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8" />
+
+		<!-- UPCOMING -->
+		<container class="tcs_box" width="400">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<!-- HEADER -->
+			<container class="main_contrast_box" rrep="primary" height="30" >
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+				<record id="default_properties" auto_size="horizontal"/>
+
+				<widget class="picture"  file="icons/26px/development" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" rrep="secondary">
+				</widget>
+
+				<widget class="text" text="Team Performance" font="title" colour="secondary" auto_size="horizontal">
+				</widget>
+			</container>
+
+			<container>
+				<layout class="horizontal_arrange" horizontal_layout="-6,-6,-6"  horizontal_gap="8" />
+
+				<widget class="client_object_viewer_selector_panel" file="human/custom/home/dummy/plst">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<widget class="client_object_viewer_selector_panel" file="human/custom/home/dummy/lgtble">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+				<widget class="client_object_viewer_selector_panel" file="human/custom/home/dummy/test">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+				</widget>
+
+
+			</container>
+
+		</container>
+
+		<!-- NEWS -->
+		<container class="tcs_box" width="400">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<!-- HEADER -->
+			<container class="main_contrast_box" rrep="primary" height="30" >
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+				<record id="default_properties" auto_size="horizontal"/>
+
+				<widget class="picture"  file="icons/26px/media" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" rrep="secondary">
+				</widget>
+
+				<widget class="text" text="News" font="title" colour="secondary" auto_size="horizontal">
+				</widget>
+			</container>
+
+			<widget class="competition_news_panel" file="human/manager home news panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+	</container>
+
+	<!-- BOTTOM HALF -->
+	<container >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="8" />
+
+		<!-- SCHEDULE -->
+		<container class="tcs_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<!-- HEADER -->
+			<container class="main_contrast_box" rrep="primary" height="30" >
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+				<record id="default_properties" auto_size="horizontal"/>
+
+				<widget class="picture"  file="icons/26px/schedule" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" rrep="secondary">
+				</widget>
+
+				<widget class="text" text="Schedule" font="title" colour="secondary" auto_size="horizontal">
+				</widget>
+			</container>			
+
+			<widget class="client_object_viewer_selector_panel" file="human/custom/home/dummy/calendar">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>		
+
+		<!-- INBOX -->
+		<container class="tcs_box" width="400">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<!-- HEADER -->
+			<container class="main_contrast_box" rrep="primary" height="30" >
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+				<record id="default_properties" auto_size="horizontal"/>
+
+				<widget class="picture"  file="icons/26px/inbox" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" rrep="secondary">
+				</widget>
+
+				<widget class="text" text="Inbox" font="title" colour="secondary" auto_size="horizontal">
+				</widget>
+			</container>
+
+			<widget class="inbox_feed_panel">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+	</container>
+
+</panel>

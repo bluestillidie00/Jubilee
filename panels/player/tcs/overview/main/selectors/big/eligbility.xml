@@ -1,0 +1,50 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<!-- TCS HEADER -->
+	<widget class="tcs_header" section="Ppin" >
+		<translation id="text" type="use" translation_id="260816" />
+	</widget>
+
+	<!-- CONTENT -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+		<!-- TOP ROW -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- DATE OF BIRTH LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<translation id="text" translation_id="363691" type="use" />
+			</widget>
+
+			<!-- LOGO -->
+			<container class="simple_data_list" id="nats" set_property="objt" alignment="horizontal,fill" >
+				<record id="object_property">
+					<integer id="get_property" value="PhgN" />
+				</record>
+				<record id="widget_properties" class="client_object_viewer_xml_panel" file="player/tcs/overview/details/selector/header/widgets/eligibility logo"/>
+			</container>
+		</container>
+
+		<!-- TOP ROW -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- DATE OF BIRTH LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<translation id="text" translation_id="363691" type="use" />
+			</widget>
+
+			<!-- LOGO -->
+			<container class="simple_data_list" id="nats" set_property="objt" alignment="horizontal,fill" >
+				<record id="object_property">
+					<integer id="get_property" value="PhCe" />
+				</record>
+				<record id="widget_properties" class="client_object_viewer_xml_panel" file="player/tcs/overview/details/selector/header/widgets/eligibility logo"/>
+			</container>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,24 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+	<!-- use this one if the panel is supplied a team -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="6" apply_to_children="true"/>
+
+		<widget class="match_team_logo_picture" id="TeLo" image_alignment="centre_y,right"/>
+	</container> 
+
+	<!-- SCORE -->
+	<container width="50">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+
+		<record id="default_properties" alignment="right,centre_y" auto_size="horizontal" multiline="false"  font="title" />
+
+		<!-- aggregate score -->
+		<widget class="text" id="mita" size="16" />
+
+		<!-- score -->
+		<widget class="text" id="mits" size="24" colour="fg" />
+	</container>
+
+</panel>

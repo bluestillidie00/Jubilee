@@ -1,0 +1,36 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+	<widget id="Htbu" class="match_console_quick_tactics_panel" auto_size="vertical">
+		<record id="object_property" get_property="objt" set_property="objt" />
+		<attachment class="test_multiple_globals_attachment" default_value="false">
+			<list id="get_properties">
+				<record get_property="hide_match_bar" test_mode="equal" value="true" skip_if_null="false" />
+				<record get_property="hide_match_bar_during_cutscene" test_mode="equal" comparison_mode="or" value="true" skip_if_null="false" />
+			</list>
+			<integer id="set_property" value="hidn" />
+		</attachment>
+	</widget>
+
+	<container  height="32">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+		<!--match timeline-->
+
+		<widget class="match_time_slider_panel" id="mtSL">
+			<animation class="slide_in_left_animation"  trigger_id="hidden" trigger_value="false" end_mode="stop"/>
+			<animation class="slide_in_right_animation" trigger_id="hidden" trigger_value="true" end_mode="hold_end"/>
+			<record id="object_property">
+				<integer id="get_property" value="objt" />
+				<integer id="set_property" value="objt" />
+			</record>
+			<attachment class="test_multiple_globals_attachment" default_value="true">
+				<list id="get_properties">
+					<record get_property="TTyp" test_mode="not_equal" value="1" skip_if_null="false"/>
+					<record get_property="dtty" test_mode="not_equal" comparison_mode="or" value="53" skip_if_null="false"/>
+					<record get_property="Tmts" test_mode="not_equal" comparison_mode="or" value="1" skip_if_null="true"/>
+				</list>
+				<integer id="set_property" value="hidn"/>
+			</attachment>
+		</widget>
+	</container>
+</panel>

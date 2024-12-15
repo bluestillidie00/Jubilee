@@ -1,0 +1,46 @@
+<panel navigation_container="true">
+    <container id="SUBP">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    </container>
+
+    <widget class="popup_button" id="popv" secondary_icon_enabled="false" icon="icons/16px/settings_disabled" red_replacement="fg lighter" auto_size="horizontal" height="16" click_event="msis" appearance="buttons/custom/customise panel/button" icon_colour="fg darker" fixed="true" navigation_focus_target="true">
+        <layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+    </widget>
+
+    <!-- BEST POSITION -->
+    <widget file="player/tcs/overview/details/selector/header/playerpic/position" id="Posi" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="332515" type="use" />
+    </widget>
+
+    <!-- EXTRA DETAILS -->
+    <widget file="player/tcs/overview/details/selector/header/playerpic/extra details" id="extr" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" value="Extra Details" type="use" />
+    </widget>
+
+    <!-- MEDIA DESCRIPTION -->
+    <widget file="player/tcs/overview/details/selector/header/playerpic/media" id="medi" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="319499" type="use" />
+    </widget>
+
+    <!-- PERSONALITY -->
+    <widget file="player/tcs/overview/details/selector/header/playerpic/personality" id="prsn" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="251873" type="use" />
+    </widget>
+
+    <!-- PLAYER WAGE -->
+    <widget file="player/tcs/overview/details/selector/header/playerpic/wage" id="wage" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="227799" type="use" />
+    </widget>
+
+    <!-- TRAINING -->
+    <widget file="player/tcs/overview/details/selector/header/playerpic/training" id="trrt" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="466504" type="use" />
+    </widget>
+    
+    <!-- TRANSFER VALUE -->
+    <widget file="player/tcs/overview/details/selector/header/playerpic/transfervalue" id="tran" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="538841" type="use" />
+    </widget>
+</panel>

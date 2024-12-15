@@ -1,0 +1,118 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+	<!-- TOP HALF -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+		<!-- TOP ROW -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- DIVISION LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="TMnR" name="true" />
+			</widget>
+		
+			<!-- DIVISION -->
+			<widget class="person_button" alignment="right,centre_y"> 
+				<record id="object_property" get_property="TMnR" />
+			</widget>
+		</container>
+
+		<!-- 2ND ROW -->
+		<container class="tcs_table_trans">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- CONTINENTAL COMP LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="TCMJ" name="true" />
+			</widget>
+
+			<container >
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+				<record id="default_properties" alignment="right,centre_y"/>
+
+				<!-- NATION -->
+				<widget class="job_status_label" >
+					<record id="object_property" get_property="TCMJ" />
+				</widget>
+
+				<!-- CITY -->
+				<widget class="manager_support_level_label" colour="faded text">
+					<record id="object_property" get_property="ccms" />
+				</widget>
+			</container>
+		</container>
+	</container>
+
+	<!-- MANAGER RECORD -->
+	<container class="club_overview_staff_panel" file="none">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container id="manC">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<widget class="person_snapshot_club_overview_panel" id="mana" player="false" file="none">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+				
+				<record id="object_property">
+					<integer id="get_property" value="TMnR" />
+					<integer id="set_property" value="objt" />
+				</record>
+				
+					<!-- W/D/L RECORD -->
+				<container class="main_subtle_box" draw_vertical_dividers="true">
+					<attachment class="horizontal_arrange" horizontal_layout="-1,-1,-1" horizontal_gap="25"/>
+
+					<!-- WIN -->
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="8" />
+
+						<widget class="picture" file="icons/16px/win" width="20" scale_picture="false" image_alignment="centre" />
+						<widget class="dashed_record_percentage_label" alignment="centre" auto_size="horizontal">
+							<record id="object_property" get_property="Tgwr" />
+						</widget>
+					</container>
+
+					<!-- DRAW -->
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="8" />
+						<widget class="picture" file="icons/16px/draw" width="20" scale_picture="false" image_alignment="centre" />
+						<widget class="dashed_record_percentage_label" alignment="centre" auto_size="horizontal">
+							<record id="object_property" get_property="Tgdr" />
+						</widget>
+					</container>
+
+					<!-- LOSS  -->
+					<container>
+						<attachment_group class="horizontal_arrange" horizontal_alignment="middle" horizontal_gap="8" />
+
+						<widget class="picture" file="icons/16px/defeat" width="20" scale_picture="false" image_alignment="centre" />
+						<widget class="dashed_record_percentage_label" alignment="centre" auto_size="horizontal">
+							<record id="object_property" get_property="Tglr" />
+						</widget>
+					</container>
+				</container>
+
+				
+			</widget>
+		</container>
+
+		<container id="nomC">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="object_action_button" id="oabt" action_id="TCpJ">
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</widget>
+		</container>
+	</container>		
+
+
+</panel>

@@ -1,0 +1,182 @@
+<!-- A panel showing various bits of information about a player -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container class="horizontal_adaptive_container" gap="8">
+
+		<!-- PLAYER PROFILE -->
+		<container default_width="220" >
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+			<!-- PLAYER FACE AND LOGO -->
+			<container>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- LOGO -->
+				<container>
+					<container height="150" width="150">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="12"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="4"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="true" transparency="0.6">
+							<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />						
+							<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+						</widget>									
+					</container>
+				</container>
+
+				<!-- PROFILE PICTURE -->
+				<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,bottom" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="6,36,0,0" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="fcgn" />
+							<record get_property="Pfke" />
+							<record get_property="prpc" set_property="valu" />
+						</list>
+					</record>
+				</widget>
+
+				<!-- Status Indicators -->
+				<widget class="player_status_all_button" id="psAB" maximised="false" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+					<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+					<record id="object_property" get_property="Pnfa"/>
+				</widget>
+				
+				<!-- PLAYER HUB TABLET -->
+				<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="top" />
+				
+					<!-- HISTORY PANEL -->
+					<container height="0">
+						 <attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+						 
+						 <container width="40">
+						 <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						 
+						<!-- OPEN BUTTON -->
+						<widget class="icon_button" id="opnT" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="tcs/icons/club/history" icon_colour="fg" width="40">
+							<translation id="hint" translation_id="229719" type="use"/>
+							
+							<event id="click_event" event_id="TabO"/>
+						
+							<!-- THIS EVENT OPENS THE SCOUTING PANEL -->
+							<attachment class="event_relay_attachment" event_id="TabO">
+								<record id="action_event">
+									<flags id="event_id" value="show"/>
+									<flags id="event_target" value="PHub"/>
+								</record>
+							</attachment>
+								
+							<!-- THIS EVENT SHOWS THE CLOSE BUTTON -->
+							<attachment class="event_relay_attachment" event_id="TabO">
+								<record id="action_event">
+									<flags id="event_id" value="show"/>
+									<flags id="event_target" value="cloT"/>
+								</record>
+							</attachment>
+						</widget>
+										
+						<!-- CLOSE BUTTON -->
+						<container>
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<widget class="icon_button" id="cloT" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/cross" icon_colour="fg" hidn="true" auto_size="horizontal">
+								<translation id="hint" translation_id="249644" type="use"/>
+								
+								<event id="click_event" event_id="TabO"/>
+									
+								<!-- THIS EVENT CLOSES THE SCOUTING PANEL -->
+								<attachment class="event_relay_attachment" event_id="TabO">
+									<record id="action_event">
+										<flags id="event_id" value="hide"/>
+										<flags id="event_target" value="PHub"/>
+									</record>
+								</attachment>
+									
+								<!-- THIS EVENT HIDES THE CLOSE BUTTON -->
+								<attachment class="event_relay_attachment" event_id="TabO">
+									<record id="action_event">
+										<flags id="event_id" value="hide"/>
+										<flags id="event_target" value="cloT"/>
+									</record>
+								</attachment>
+					
+							</widget>
+						</container>
+						</container>
+					</container>
+				
+				</container>
+			</container>
+
+			<!-- NAME -->
+			<widget class="person_button" font="title" info_popup_enabled="false" alignment="centre,can_scale" size="xlarge" auto_size="vertical" wants_mouse_events="false">
+				<record id="object_property" get_property="Pnms"/>
+			</widget>
+
+		<container class="client_object_viewer_selector_panel" id="atS2" priority="1" default_item="bFot" file="player/tcs/overview/details/selector/header/playerpic/selector" save_session_state="true" dont_set_embedded_title="true" height="24">
+			<integer id="default_for_unemployed_managers" value="Posi"/>
+			<integer id="default_for_international_managers_other_team" value="Posi"/>
+			<integer id="default_for_everyone_else" value="Posi"/>
+			<integer id="default_for_versus_mode" value="Posi"/>
+		</container>
+
+		</container>
+
+		<!-- SELECTORS -->
+		<container default_width="-1" class="horizontal_adaptive_container">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+			<!-- DEFAULT PROPERTIES -->
+			<record id="default_properties" file="player/tcs/overview/details/h_selector" default_width="-1" minimum_width="350">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</record>
+
+			<!-- SELECTOR 1 // PERSONAL DETAILS -->
+			<container class="client_object_viewer_selector_panel" id="csh1" priority="1">
+				<integer id="default_for_unemployed_managers" value="pede"/>
+				<integer id="default_for_international_managers_other_team" value="pede"/>
+				<integer id="default_for_everyone_else" value="pede"/>
+				<integer id="default_for_versus_mode" value="pede"/>
+			</container>
+
+			<!-- SELECTOR 2 // TRANSFER DETAILS -->
+			<container class="client_object_viewer_selector_panel" id="csh2" priority="2">
+				<integer id="default_for_unemployed_managers" value="Pccr"/>
+				<integer id="default_for_international_managers_other_team" value="Pccr"/>
+				<integer id="default_for_everyone_else" value="Pccr"/>
+				<integer id="default_for_versus_mode" value="Pccr"/>
+			</container>
+
+			<!-- SELECTOR 3 // TRANSFER INFORMATION -->
+			<container class="client_object_viewer_selector_panel" id="csh3" priority="3">
+				<integer id="default_for_unemployed_managers" value="Ptin"/>
+				<integer id="default_for_international_managers_other_team" value="Ptin"/>
+				<integer id="default_for_everyone_else" value="Ptin"/>
+				<integer id="default_for_versus_mode" value="Ptin"/>
+			</container>
+
+			<!-- SELECTOR 4 // RECENT FORM -->
+			<container class="client_object_viewer_selector_panel" id="csh4" priority="4">
+				<integer id="default_for_unemployed_managers" value="form"/>
+				<integer id="default_for_international_managers_other_team" value="form"/>
+				<integer id="default_for_everyone_else" value="form"/>
+				<integer id="default_for_versus_mode" value="form"/>
+			</container>
+
+			<!-- SELECTOR 5 // DNA POLYGON -->
+			<container class="client_object_viewer_selector_panel" id="csh5" priority="5">
+				<integer id="default_for_unemployed_managers" value="dnaA"/>
+				<integer id="default_for_international_managers_other_team" value="dnaA"/>
+				<integer id="default_for_everyone_else" value="dnaA"/>
+				<integer id="default_for_versus_mode" value="dnaA"/>
+			</container>
+
+		</container>
+	</container>
+</panel>

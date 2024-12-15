@@ -1,0 +1,3 @@
+﻿<class class="tcs_overlay" parent="plain_box">
+	<flags id="appearance" value="tcs/backgrounds/overlay/100"/>
+</class>

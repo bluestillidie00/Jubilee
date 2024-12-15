@@ -1,0 +1,77 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<!--very close relationship colour-->
+	<colour id="pVgC" name="very close relationship" />
+	<!--close relationship colour-->
+	<colour id="pgCl" name="close relationship" />
+	<!--aquaintance relationship colour-->
+	<colour id="pACl" name="aquaintance relationship" />
+	<!--contact relationship colour-->
+	<colour id="pCTr" name="contact relationship" />
+	<!--rival relationship colour-->
+	<colour id="prVr" name="rival relationship" />
+	<!--adversary relationship colour-->
+	<colour id="pAdv" name="adversary relationship" />
+	<!--distant relationship colour-->
+	<colour id="pCds" name="distant relationship" />
+
+	<!-- HEADER -->
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Prel" auto_size="all">
+			<translation id="text" type="use" translation_id="447541" />
+		</widget>
+
+		<widget class="spacer" height="3" />
+	</container>
+
+	<!--Squad Hierarchy-->
+	<container >
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+		<!-- RELATIONSHIP WITH YOU -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- LABEL -->
+			<widget class="label" auto_size="horizontal" alignment="left,centre_y" >
+				<translation id="text" translation_id="243508" type="use" value="Relationship With You" />
+			</widget>
+
+			<!-- RELATIONSHIP -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+
+				<widget class="text" id="dreL" auto_size="horizontal" alignment="right,centre_y" />
+			</container>
+		</container>
+		
+		<!-- RELATIONSHIP WITH YOU -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- LABEL -->
+			<widget class="label" auto_size="horizontal" alignment="left,centre_y" >
+				<translation id="text" type="use" value="Opinion of You"  />
+			</widget>
+
+			<!-- RELATIONSHIP -->
+	
+		<container class="vertical_label_value_pair" label_widget="opHd" value_widget="opiL">
+			<attachment_group class="vertical_arrange" vertical_arrange="middle" />
+<container height="16" />
+			<widget class="text" id="opiL" alignment="right" auto_size="vertical" font="text" multiline="true">
+			</widget>
+		</container>
+		</container>
+
+
+	</container>
+
+</panel>

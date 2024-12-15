@@ -1,0 +1,32 @@
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+    <!-- TCS HEADER -->
+    <widget class="tcs_header" section="Pply" >
+        <translation id="text" type="use" translation_id="513602" />
+    </widget>
+
+    <container class="horizontal_adaptive_container" offset="0" inset="0" gap="8" mode="distribute_equally">
+
+        <container minimum_width="300" priority="1" default_width="-1" class="tcs_subtle_box">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+            <!-- CAREER STATS -->
+            <widget class="playing_history_summary_panel" id="csts" file="player/tcs/overview/main/selectors/big/career_stats" >
+                <translation id="title" translation_id="247605" type="use" value="History Summary[COMMENT: retired person profile; header text on panel which summarises their career history in the form of a condensed career history list]" />
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </widget>
+        </container>
+
+        <container minimum_width="300" priority="1" default_width="-1" class="tcs_subtle_box">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+            <!-- MILESTONES -->
+            <widget class="player_history_achievements_panel" id="PHac" late_loading="true" file="player/tcs/overview/main/selectors/big/milestones">
+                <translation id="title" translation_id="435775" type="use" />
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </widget>
+        </container>
+
+    </container>
+</panel>

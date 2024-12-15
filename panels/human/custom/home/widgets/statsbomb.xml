@@ -1,0 +1,41 @@
+<panel>
+	<layout class="vertical_arrange" vertical_layout="-1,420" vertical_gap="8"/>
+
+	<!-- TOP -->
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="-1,-1,-2"/>
+		
+		<!-- XG TABLE -->
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<widget class="client_object_viewer_xml_panel" id="xgtabl1" visualisation_type="9" data_type="1" late_loading="true" category="0" file="generic/analyst xG table">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+				<translation id="title" translation_id="515048" type="use" value="xG[COMMENT: AREA: Team Stat; SUB-AREA: Expected goals stats FR: 32708; TONE: Formal; CHARLIMIT: None; NOTE: expected goals short string]"/>
+			</widget>
+		</container>	
+	</container>
+
+	<!-- DATA HUB -->
+	<container class="tcs_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+		
+		<!-- HEADER -->
+		<container class="main_contrast_box" rrep="primary" height="30">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+			<record id="default_properties" auto_size="horizontal"/>
+
+			<widget class="picture" file="icons/26px/data hub" keep_aspect_ratio="true" scale_picture="true" image_alignment="centre" rrep="secondary">
+			</widget>
+
+			<widget class="text" text="Data Hub" font="title" colour="secondary" auto_size="horizontal">
+			</widget>
+		</container>
+		
+		<!-- DATA HUB -->
+		<container class="data_hub_team_analytics_panel">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+	</container>
+
+</panel>

@@ -1,0 +1,18 @@
+<panel>
+    <container id="SUBP" class="inner_box_no_margin" >
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    </container>
+
+    <record id="default_properties" late_loading="true"/>
+
+    <container class="club_overview_panel" file="none" id="tssp">
+        <translation id="title" translation_id="247393" type="use" value="Team Stats"/>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <container class="team_report_last_match_overview_panel" file="team/team report last match overview panel manger home">
+            <record id="object_property" get_property="Tftm" set_property="objt"/>
+        </container>
+    </container>
+
+</panel>

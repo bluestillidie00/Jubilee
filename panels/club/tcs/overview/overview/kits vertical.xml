@@ -1,0 +1,51 @@
+<panel>
+	<layout class="arrange_vertical_attachment" alignment="middle,extend" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" />
+
+	<!-- We are using a spacer here so we can limit our images size, but still remain centered in our parent -->
+	<widget class="spacer" height="1" />
+
+	<container id="kitH">
+<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="8"/>
+
+		<record id="default_properties" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
+			<record id="object_property">
+				<integer id="get_property" value="Tidx" />
+				<integer id="set_property" value="indx" />
+			</record>
+		</record>
+
+		<container class="tcs_box" id="T_hk">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<widget class="kit_picture" id="T_hk" kit_id="0" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
+				<record id="object_property">
+					<integer id="get_property" value="Tidx" />
+					<integer id="set_property" value="indx" />
+				</record>
+			</widget>
+		</container>
+
+		<container class="tcs_box" id="T_ak">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<widget class="kit_picture" id="T_ak" kit_id="1" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
+				<record id="object_property">
+					<integer id="get_property" value="Tidx" />
+					<integer id="set_property" value="indx" />
+				</record>
+			</widget>
+		</container>
+
+		<container class="tcs_box" id="T_tk">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<widget class="kit_picture" id="T_tk" kit_id="2" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" always_use_latest_object_list="true">
+				<record id="object_property">
+					<integer id="get_property" value="Tidx" />
+					<integer id="set_property" value="indx" />
+				</record>
+			</widget>
+		</container>
+
+		<!-- <widget class="kit_picture" id="T_tk" kit_id="2" /> -->
+	</container>
+
+</panel>

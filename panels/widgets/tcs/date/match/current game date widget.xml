@@ -1,0 +1,41 @@
+<panel height="44" width="122">
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+	<!-- BUTTON BG -->
+	<widget class="button"
+	        appearance="tcs/buttons/date/matchday/button"
+	        id="actn"
+	        click_event="opcl"
+	        height="42"
+	        focus_appearance="chrome/buttons/date/button_controller"	
+			rrep="bg lighter"			
+			brep="secondary"			
+			grep="secondary"			
+			/>
+
+	<!-- DATE AND TIME -->
+	<container>
+		<layout class="arrange_vertical_attachment" alignment="middle" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="18" apply_to_children="true" auto_size="horizontal"/>
+
+		<!-- TOP LINE -->
+		<widget class="text" id="dytm"
+		        auto_size="vertical"
+		        font="text"
+		        size="medium"
+		        alignment="left"
+		        colour="fg"
+		        disabled_colour="faded text"/>
+
+		<!-- BOTTOM LINE -->
+		<widget class="text"
+		        id="dtam"
+		        auto_size="vertical"
+		        font="text"
+		        style="bold"
+		        size="medium"
+		        alignment="left"
+		        colour="fg"
+		        disabled_colour="faded text"/>
+	</container>
+</panel>

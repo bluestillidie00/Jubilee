@@ -1,0 +1,17 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="4"/>
+
+	<boolean id="should_force_refresh" value="true" />
+
+	<!-- Cycle through different prozone stats -->
+	<container id="proz" class="animated_wipe_cycle_fade_container" property_to_set="objt">
+		<!-- Note: Interval is the number of seconds each stat will be visible for-->
+		<record id="widget_properties" class="property_list_viewer_xml_panel" file="competition/mustermann/competition overview/prozone details" interval="6"/>
+	</container>
+	
+	<container>
+<attachment_group class="vertical_arrange" vertical_alignment="bottom" />	
+	<widget class="picture" file="tcs/icons/partners/wyscout" image_alignment="right" keep_aspect_ratio="true" scale_picture="true" height="20" width="60" rrep="tcs_accent"/>
+	</container>
+	
+</panel>

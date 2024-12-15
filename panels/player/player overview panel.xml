@@ -1,0 +1,190 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!-- CONTAINER NESTED LIKE THIS SO WE CAN HAVE THE TABLET OVERLAYED -->
+	<container>
+		<layout class="vertical_arrange" vertical_layout="240,-1" vertical_gap="8"/>
+
+		<!-- PLAYER INFO -->
+		<container class="tcs_box">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<!--	HEADER WITH PORTRAIT & IMPORTANT INFO -->
+			<widget class="player_personal_details_panel" id="ppdp" navigation_container="true" file="player/tcs/overview/details/header">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+		<!-- MAIN BOX -->
+		<container class="tcs_tabs" default_item="over" save_default_state="true" save_session_state="true">
+
+			<!-- OVERVIEW -->
+			<container id="over" file="none">
+				<translation id="title" translation_id="247414" type="use"/>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<record id="object_property" get_property="objt" set_property="objt"/>
+
+				<!-- OVERVIEW AND POSITIONS -->
+				<container>
+					<layout class="vertical_arrange" vertical_layout="450,-1" vertical_gap="8"/>
+
+					<!--ATTRIBUTES -->
+					<container>
+						<layout class="horizontal_arrange" horizontal_layout="340,-1," horizontal_gap="8"/>
+
+						<container class="tcs_box" default_width="380" priority="3">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container class="client_object_viewer_selector_panel" id="csmL" file="player/tcs/overview/main/selectors/big" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
+								<integer id="default_for_unemployed_managers" value="ppi1"/>
+								<integer id="default_for_international_managers_other_team" value="ppi1"/>
+								<integer id="default_for_everyone_else" value="ppi1"/>
+								<integer id="default_for_versus_mode" value="ppi1"/>
+							</container>
+						</container>
+					
+						<container class="horizontal_adaptive_container" gap="8">
+
+							<container class="tcs_box" default_width="-1" minimum_width="480" priority="1">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<container class="client_object_viewer_selector_panel" id="cos1" minimum_width="550" default_width="-2" priority="2" file="player/tcs/overview/main/selectors/seasonstats/asel" save_session_state="true" dont_set_embedded_title="true">
+									<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true">
+										<translation id="title" translation_id="229822" type="use" value="Attributes"/>
+									</widget>
+
+									<integer id="default_for_unemployed_managers" value="pat1"/>
+									<integer id="default_for_international_managers_other_team" value="pat1"/>
+									<integer id="default_for_everyone_else" value="pat1"/>
+									<integer id="default_for_versus_mode" value="pat1"/>
+								</container>
+							</container>
+
+							<container class="tcs_box" default_width="260" priority="2">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container class="client_object_viewer_xml_panel" file="player/tcs/overview/main/widgets/personality" >
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</container>							
+						</container>
+
+							<container class="tcs_box" default_width="380" priority="3">
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<container class="client_object_viewer_selector_panel" id="csmR" file="player/tcs/overview/main/selectors/big" minimum_width="310" default_width="-1" priority="3" navigation_container="true">
+									<integer id="default_for_unemployed_managers" value="reOv"/>
+									<integer id="default_for_international_managers_other_team" value="reOv"/>
+									<integer id="default_for_everyone_else" value="reOv"/>
+									<integer id="default_for_versus_mode" value="reOv"/>
+								</container>
+							</container>
+						</container>
+
+					</container>
+
+					<!-- SEASON STATS AND SELECTOR -->
+					<container class="horizontal_adaptive_container" gap="8">
+				
+						<container class="tcs_box" default_width="-1" minimum_width="600" priority="1">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<widget class="player_additional_stats_panel" id="pcsp" file="player/player additional stats small">
+								<record id="object_property">
+									<list id="get_properties">
+										<!-- Hide this panel if player is in inactive league-->
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<record id="object_property" get_property="Pila" set_property="hidn"/>
+									</list>
+								</record>
+							</widget>
+							<widget class="player_stats_panel" id="pssp" file="player/player stats small">
+								<record id="object_property">
+									<list id="get_properties">
+										<!-- Show this panel if player is in inactive league-->
+										<record id="object_property" get_property="Pila" set_property="Shwn"/>
+										<record id="object_property" get_property="objt" set_property="objt"/>
+									</list>
+								</record>
+							</widget>
+						</container>
+				
+						<container class="tcs_box" minimum_width="310" default_width="400" priority="2">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<!-- SELECTOR -->
+							<container class="client_object_viewer_selector_panel" id="csbL" file="player/tcs/overview/main/selectors/seasonstats/asel" navigation_container="true">
+								<integer id="default_for_unemployed_managers" value="Pcrs"/>
+								<integer id="default_for_international_managers_other_team" value="Pcrs"/>
+								<integer id="default_for_everyone_else" value="Pcrs"/>
+								<integer id="default_for_versus_mode" value="Pcrs"/>
+							</container>
+						</container>
+					
+						<container class="tcs_box" minimum_width="310" default_width="400" priority="3">
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+							<!-- SELECTOR -->
+							<container class="client_object_viewer_selector_panel" id="csbR" file="player/tcs/overview/main/selectors/seasonstats/asel" minimum_width="310" default_width="400" priority="3" navigation_container="true">
+								<integer id="default_for_unemployed_managers" value="Pcrs"/>
+								<integer id="default_for_international_managers_other_team" value="Pcrs"/>
+								<integer id="default_for_everyone_else" value="Pcrs"/>
+								<integer id="default_for_versus_mode" value="Pcrs"/>
+							</container>
+						</container>
+
+					</container>
+				</container>
+			</container>
+
+			<!-- CAREER STATS -->
+			<container id="cSta" class="player_history_stats_panel">
+				<translation id="title" translation_id="247605" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+
+			<!-- DISCUSSION -->
+			<container id="DIwp" class="person_discussion_panel" file="player/tcs/overview/main/tabs/discuss">
+				<translation id="title" translation_id="509216" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+
+			<!-- HAPPINESS -->
+			<container id="tHap" class="person_chemistry_relationship_panel" file="player/tcs/overview/main/tabs/happiness">
+				<translation id="title" translation_id="447639" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+
+			<!-- MEDICAL REPORT -->
+			<container id="PInj" class="player_injury_panel">
+				<translation id="title" translation_id="447586" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+
+			<!-- MEDICAL REPORT -->
+			<container id="pRep" class="client_object_viewer_xml_panel" file="player/tcs/overview/main/tabs/reports">
+				<translation id="title" translation_id="254774" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+
+			<!-- STATS 
+			<container id="Psta" class="client_object_viewer_xml_panel">
+				<translation id="title" translation_id="227953" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container> -->
+		
+			<!-- TRANSFER STATUS -->
+			<container id="Ptin" class="player_transfer_information_panel">
+				<translation id="title" translation_id="227953" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>
+	</container>
+	
+	<!-- TABLET -->
+	<container>
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+		
+		<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/playerhub/base" width="820" hidn="true" id="PHub">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>	
+	</container>
+
+</panel>

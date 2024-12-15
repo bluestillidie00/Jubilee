@@ -1,0 +1,14 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<!-- League Table -->
+	<container class="league_positions_panel" id="lpos" file="team/team competitions overview past positions panel" row="1" col="0" column_span="2" height="40">
+		<record id="object_property">
+			<list id="get_properties">
+				<!-- PROP_TEAM_CURRENT_DIVISION -->
+				<record get_property="Cddl" set_property="objt"/>
+				<record get_property="Tftm" set_property="team"/>
+			</list>
+		</record>
+	</container>
+</panel>

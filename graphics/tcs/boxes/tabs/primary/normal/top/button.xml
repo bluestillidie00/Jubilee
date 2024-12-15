@@ -1,0 +1,15 @@
+<properties>
+
+	<record id="image_borders" left="14" right="12" top="0" bottom="10"/>
+	<record id="image_slices" left="14" right="10"/>
+
+	<record id="font_spec"> 
+		<colour id="colour" name="faded text"/>
+	</record>
+	
+	<colour id="red_replacement" name="bg"/>
+	<colour id="green_replacement" name="fg darker"/>
+
+	<record id="primary_icon_properties" red_replacement="secondary" />
+	
+</properties>

@@ -1,0 +1,53 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<!-- HEADER -->
+	<container height="18">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+		<string id="skin_style" value="title link" />
+
+		<!-- Linked header -->
+		<widget class="link_button" section="Pfrm" auto_size="all">
+			<translation id="text" type="use" translation_id="421076" />
+		</widget>
+
+		<widget class="spacer" height="3" />
+	</container>
+
+	<!-- CONTENT -->
+	<container class="tcs_tabs" default_item="la10" save_default_state="true" save_session_state="true">
+
+	<widget class="player_additional_stats_panel" file="none" id="la5g">
+		<record id="object_property" get_property="objt" set_property="objt" />
+		<translation id="title" type="use" value=" 5 Games" />
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
+		<widget class="player_form_summary_panel" file="player/tcs/overview/details/selector/header/last5" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>	
+	</widget>
+
+	<!-- LAST 10 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la10">
+		<record id="object_property" get_property="objt" set_property="objt" />
+		<translation id="title" type="use" value=" 10 Games" />
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
+		<widget class="player_form_summary_panel" file="player/tcs/overview/details/selector/header/last10" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>	
+	</widget>
+
+	<!-- LAST 10 GAMES -->
+	<widget class="player_additional_stats_panel" file="none" id="la20">
+		<record id="object_property" get_property="objt" set_property="objt" />
+		<translation id="title" type="use" value=" 20 Games" />
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
+		<widget class="player_form_summary_panel" file="player/tcs/overview/details/selector/header/last20" >
+			<record id="object_property" get_property="objt" set_property="objt" />
+		</widget>	
+	</widget>
+
+	</container>
+
+</panel>

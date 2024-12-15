@@ -1,0 +1,143 @@
+<panel>
+    <layout class="horizontal_arrange" horizontal_layout="320,-1" horizontal_gap="8"/>
+
+    <!-- LEFT -->
+    <container>
+        <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_gap="8" />
+
+        <!-- MATCH INFO -->
+        <widget class="match_info_panel" id="bmin" height="160" file="none">
+            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+            <record id="object_property" get_property="objt" set_property="objt"/>
+
+            <!-- STADIUM CONTAINER-->
+            <container>
+                <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+                <!-- STADIUM -->
+                <widget class="stadium_picture" id="STAp" file="none">
+                    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="-50"/>
+
+                    <record id="object_property" get_property="objt" set_property="objt"/>
+                    <record id="default_properties" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true"/>
+
+                    <widget class="picture" file="pictures/stadiums/stadium_bg" />
+                    <widget class="picture" id="bkgd" file="pictures/stadiums/none_base" hidden="true"/>
+                    <widget class="picture" id="STPC"/>
+                </widget>
+
+                <!-- OVERLAY -->
+                <container class="tcs_box" appearance="tcs/boxes/main/solid/paper" rrep="bg lighter" transparency="0.5"/>
+
+                <!-- ROUNDS THE EDGES -->
+                <container class="tcs_box" appearance="tcs/ro" rrep="bg lighter" />
+            </container>
+
+            <container>
+                <layout class="horizontal_arrange" horizontal_layout="-1,20,-1"  />
+
+                <!--  home incidents panel -->
+                <widget class="home_match_incidents_panel" id="hmip" file="match/tcs/instantresult/left" small_version="true"/>
+
+                <widget class="text" size="22" alignment="centre" font="title" colour="fg">
+                    <string id="text" value="-"/>
+                </widget>
+
+                <!--  away incidents panel -->
+                <widget class="away_match_incidents_panel" id="amip" file="match/tcs/instantresult/right" small_version="true"/>
+            </container>
+
+            <!-- INFO -->
+            <container>
+                <attachment_group class="vertical_arrange" vertical_alignment="bottom" vertical_offset="4" horizontal_inset="8" />
+
+                <!-- STADIUM AND COMP -->
+                <container class="tcs_box" appearance="tcs/boxes/stadium/paper" rrep="bg" height="36">
+                    <attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="-2" />
+
+                    <record id="default_properties" alignment="centre" auto_size="vertical"/>
+
+                    <!-- STADIUM -->
+                    <widget class="stadium_button" id="stad" icon_enabled="false" font="title" colour="fg">
+                        <translation id="no_object_text" translation_id="227505" type="use" value="Unknown Stadium"/>
+                        <record id="object_property" get_property="stad" />
+                    </widget>
+
+                    <!-- COMPETITION -->
+                    <widget class="fixture_name_text" size="xsmall" colour="faded text">
+                        <record id="object_property" get_property="FxNm" />
+                    </widget>                   
+                </container>
+            </container>
+        </widget>
+
+        <!-- AS IT HAPPENED -->
+        <widget class="match_notable_events_panel" file="none" id="nota">
+            <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+            <record id="object_property" get_property="objt" set_property="objt"/>
+
+            <container id="NEve" class="tcs_subtle_box">
+                <attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="4" horizontal_inset="4" />
+
+                <widget class="text" font="title" auto_size="vertical" alignment="centre" colour="title">
+                    <translation id="text" translation_id="515063" type="use" value="Notable Events[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing notable events from the match; goals, cards etc]" />
+                </widget>
+                <!---->
+
+                <widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true" >
+
+                    <list id="column_widget_properties">
+                        <record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false" />
+                        <record index="1" icon_alignment="centre" navigation_focus_target="false" />
+                        <record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false" />
+                        <record index="3" icon_alignment="centre" navigation_focus_target="false" />
+                        <record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false" />
+                    </list>
+
+                    <list id="column_table_properties">
+                        <record index="0" id="homt" />
+                        <record index="1" id="homi" />
+                        <record index="2" id="time" />
+                        <record index="3" id="awai" />
+                        <record index="4" id="awat" />
+                    </list>
+                </widget>
+            </container>
+
+        </widget>
+
+    </container>
+
+    <container class="tcs_tabs" save_session_state="true" save_default_state="true" default_item="MSPn">
+
+        <widget class="match_stats_panel" id="MSPn" file="match/tcs/instantresult/match stats">
+            <translation id="title" translation_id="284365" type="use" />
+            <record id="object_property" get_property="objt" set_property="objt"/>
+        </widget>
+
+
+        <!-- MATCH STATS -->
+        <container id="home">
+            <translation id="title" type="use" value="Home Stats" />
+            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+            <!-- HOME TEAM -->
+            <widget class="match_team_stats_panel" id="fMst" file="match/tcs/simulate match/team stats" team_index="0">
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </widget>
+        </container>
+
+        <container id="away">
+            <translation id="title" type="use" value="Away Stats" />
+            <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+            <!-- HOME TEAM -->
+            <widget class="match_team_stats_panel" id="aMst" file="match/tcs/simulate match/team stats" team_index="1">
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </widget>
+        </container>
+
+    </container>
+
+</panel>

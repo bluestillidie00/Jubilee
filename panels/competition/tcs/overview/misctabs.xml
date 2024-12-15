@@ -1,0 +1,54 @@
+<panel>
+<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<container class="tcs_tabs" save_session_state="true" save_default_state="true">
+	
+	<!-- RECORDS -->
+		<widget class="award_winners_panel" id="adwn">
+			<translation id="title" translation_id="292779" type="use" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+		<!-- MANAGER MOVEMENT -->
+		<widget class="competition_manager_movements_panel" id="mmmp">
+			<translation id="title" translation_id="352110" type="use" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+		<!-- RECORDS -->
+		<widget class="competition_records_master_panel" id="reco">
+			<translation id="title" translation_id="243323" type="use" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+		<!-- REFEREES -->
+		<widget class="competition_referee_table_panel" id="refs">
+			<translation id="title" translation_id="492123" type="use" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+		<!-- INJURY TABLE -->
+		<widget class="competition_injury_table_panel" id="inju">
+			<translation id="title" translation_id="331637" type="use" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+
+		<!-- TRANSFER RUMOURS -->
+		<widget class="competition_transfer_rumours_panel" id="trnr">
+			<translation id="title" translation_id="284369" type="use" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+		<!-- HISTORY TAB -->
+		<container id="ttru" hidn="true">
+			<animation class="slide_in_top_animation"/>
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+			<widget class="client_object_viewer_xml_panel" file="club/tcs/overview/tabs/history">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+	
+	</container>
+
+</panel>

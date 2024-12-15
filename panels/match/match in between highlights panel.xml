@@ -1,0 +1,365 @@
+<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+	<!-- these are defaults tablet sizes-->
+	<integer id="TbWs" value="300"/>
+	<integer id="TbWm" value="650"/>
+	<integer id="TbWl" value="1070"/>
+
+	<list id="properties_to_forward">
+		<record get_property="HNEp" target="NEvp" set_property="hidn" />
+		<record get_property="HFep" target="FEEP" set_property="hidn" />
+		<record get_property="HTtp" target="TTab" set_property="hidn" />
+		<record get_property="OTfi" target="TTab" set_property="OTfi" />
+		<record get_property="HTsi" target="TTab" set_property="HTsi" />
+		<record get_property="OTsi" target="TTab" set_property="OTsi" />
+		<record get_property="HSMt" target="TTab" set_property="HSMt" />
+		<record get_property="ASMt" target="TTab" set_property="ASMt" />		
+		<record get_property="HPMt" target="TTab" set_property="HPMt" />
+		<record get_property="APMt" target="TTab" set_property="APMt" />
+	</list>
+
+	<container id="TTab" >
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<!-- <container class="tcs_overlay" appearance="tcs/backgrounds/overlay/blurred" transparency="0.51" /> -->
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom"/>
+
+			<container height="660">
+				<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+				<!-- ACTUAL TABLET -->
+				<container class="tcs_box" appearance="tcs/matchday/tablet/paper" width="970">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container class="tcs_tabs" save_session_state="true" save_default_state="true">
+
+						<!-- OVERVIEW TAB -->
+						<container id="over">
+							<translation id="title" type="use" value="! Overview" />
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container id="NEve" class="match_notable_events_panel" file="none">
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8" horizontal_offset="16" vertical_inset="16"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<!-- MATCH STATS -->
+								<container class="tcs_table">
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+									<container id="Msts">
+										<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+										<widget class="text" id="mstx" font="title" auto_size="vertical" alignment="centre" colour="title">
+											<translation id="text" translation_id="247439" type="use" value="Match Stats" />
+										</widget>
+
+										<widget class="match_stats_panel" id="mStO" auto_size="vertical" file="match/match stats">
+										</widget>
+									</container>
+								</container>
+
+								<container class="tcs_table">
+									<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+									<!-- NOTABLE EVENTS -->
+									<container id="NEvp">
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+										<widget id="NEve" class="match_notable_events_panel" file="none">
+											<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+											<record id="object_property" get_property="objt" set_property="objt"/>
+
+											<widget class="text" font="title" auto_size="vertical" alignment="centre" colour="title">
+												<translation id="text" translation_id="515063" type="use" value="Notable Events[COMMENT: AREA: Match panel; SUB-AREA: match caption; FR: 32364; TONE: Formal; CHARLIMIT: None; NOTE: title text for showing notable events from the match; goals, cards etc]" />
+											</widget>
+
+											<widget class="table" id="miit" layout="-1,24,40,24,-1" mode="fill_rows" navigation_container="true" row_spacing="0" row_height="22" fixed_size_rows="true" >
+												<list id="column_widget_properties">
+													<record index="0" spec="text" alignment="right,centre_y" navigation_focus_target="false" />
+													<record index="1" icon_alignment="centre" navigation_focus_target="false" />
+													<record index="2" spec="text" style="bold" alignment="centre" navigation_focus_target="false" />
+													<record index="3" icon_alignment="centre" navigation_focus_target="false" />
+													<record index="4" spec="text" alignment="left,centre_y" navigation_focus_target="false" />
+												</list>
+
+												<list id="column_table_properties">
+													<record index="0" id="homt" />
+													<record index="1" id="homi" />
+													<record index="2" id="time" />
+													<record index="3" id="awai" />
+													<record index="4" id="awat" />
+												</list>
+											</widget>
+
+										</widget>
+									</container>
+
+									<widget class="link_button" id="bpln" section="mapl" auto_size="horizontal" colour="text" blue_replacement="text" alignment="centre_x" rrep="white">
+										<record id="auto_size_restrictions">
+											<string id="type" value="available" />
+											<string id="limit_type" value="maximum" />
+											<string id="orientation" value="horizontal" />
+										</record>
+										<translation id="text" type="use" value="Match Analysis" />
+									</widget>
+								</container>
+							</container>
+						</container>
+
+						<!-- INFO TAB -->
+						<container id="info">
+							<translation id="title" type="use" value="! Info" />
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8" horizontal_offset="16" vertical_inset="16"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<!-- MATCH STATS -->
+								<container class="tcs_table">
+									<layout class="vertical_arrange" vertical_layout="220,-1" />
+
+									<!-- STADIUM PICTURE -->
+									<container height="230">
+										<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+										<widget class="stadium_picture" id="STAp" width="360" alignment="centre" auto_size="horizontal" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+											<record id="object_property" get_property="objt" set_property="objt"/>
+										</widget>
+									</container>
+
+									<container>
+										<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+										<!-- WEATHER FORECAST-->
+										<widget class="weather_indicator_panel_centred" id="FxWe" file="none" height="24">
+											<layout class="centre_in_parent_attachment" alignment="horizontal" apply_to_children="true" />
+											<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+											<record id="object_property" get_property="FxWe"/>
+
+											<container>
+												<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="4"/>
+												<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="4"/>
+												<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+												<!-- PRETTY ICON -->
+												<widget class="picture" id="icon" image_alignment="left" width="24" scale_picture="true" keep_aspect_ratio="true" />
+
+												<!-- DESCRIPTION LABEL -->
+												<widget class="label" id="desc" alignment="left,centre_y" auto_size="horizontal" />
+											</container>
+										</widget>
+
+										<!-- REFEREE -->
+										<container>
+											<global id="hidden" name="game_mode_is_console_mode" />
+											<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+											<widget class="label" auto_size="all" size="small">
+												<translation id="text" translation_id="227993" type="use" value="Referee" />
+												<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+											</widget>
+											<widget class="person_button" auto_size="all" >
+												<record id="object_property" get_property="FRef" dont_set_hint="true" />
+											</widget>
+										</container>
+
+										<!-- COMPETITION -->
+										<container>
+											<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+											<widget class="label" auto_size="all" size="small" alignment="centre_y" >
+												<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+												<translation id="text" translation_id="227740" type="use" value="Competition" />
+											</widget>
+											<widget class="fixture_name_text" auto_size="all" icon_enabled="true">
+												<record id="object_property" get_property="FxNm" />
+											</widget>
+										</container>
+
+										<!-- REFEREE -->
+										<container>
+											<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="middle" />
+											<widget class="label" auto_size="all" size="small" >
+												<layout class="stick_to_sides_attachment" alignment="top" inset="3"/>
+												<translation id="text" translation_id="247242" type="use" value="Attendance" />
+											</widget>
+											<widget class="number_label" auto_size="all">
+												<record id="object_property" get_property="FxEA" dont_set_hint="true" />
+											</widget>
+										</container>
+
+									</container>
+								</container>
+
+								<!-- NOTABLE EVENTS -->
+								<container class="tcs_table" >
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+									<widget class="match_info_panel" id="bmin" file="file" >
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+										<!--  home incidents panel -->
+										<widget class="home_match_incidents_panel" id="hmip" small_version="false" file="none">
+											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+											<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" >
+												<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
+											</widget>
+										</widget>
+
+										<!--  home incidents panel -->
+										<widget class="away_match_incidents_panel" id="amip" small_version="false" file="none">
+											<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+											<widget class="kit_picture" id="teKP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" >
+												<layout class="stick_to_sides_attachment" inset="36,8,8,8"/>
+											</widget>
+										</widget>
+									</widget>
+
+								</container>
+							</container>
+						</container>
+
+						<!-- INFO TAB -->
+						<container id="rati">
+							<translation id="title" type="use" value="! Ratings" />
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8" horizontal_offset="16" vertical_inset="16"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<!-- MATCH STATS -->
+								<container class="tcs_table">
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+									<widget class="match_team_stats_panel" id="hfMs" file="match/match team stats full floating" team_index="0">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+									</widget>
+
+								</container>
+
+								<!-- NOTABLE EVENTS -->
+								<container class="tcs_table" >
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+									<widget class="match_team_stats_panel" id="afMs" file="match/match team stats full floating" team_index="1">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+
+										<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+									</widget>
+								</container>
+							</container>
+						</container>
+
+						<!-- INFO TAB -->
+						<container id="form">
+							<translation id="title" type="use" value="Formations" />
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8" horizontal_offset="16" vertical_inset="16"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+
+								<!-- MATCH STATS -->
+								<container class="tcs_table">
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+										<widget class="match_formation_panel" id="hmtt" file="match/match formation panel review" team_index="0" read_only="true">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+		</widget>
+
+								</container>
+
+								<!-- NOTABLE EVENTS -->
+								<container class="tcs_table" >
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+									<widget class="match_formation_panel" id="amtt" file="match/match formation panel review" team_index="1" read_only="true">
+			<translation id="title" translation_id="230056" type="use" value="Tactics" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+								</container>
+							</container>
+						</container>
+
+						<!-- INFO TAB -->
+						<container id="artg">
+							<translation id="title" type="use" value="Around the Grounds" />
+							<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+									<!-- MATCH STATS -->
+								<container>
+									<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+									<widget class="match_updates_panel" id="atrg" file="match/tcs/tablet/updates">
+										<record id="object_property" get_property="objt" set_property="objt"/>
+										<translation id="title" translation_id="247393" type="use" value="Team Stats" />
+									</widget>
+
+							</container>
+						</container>
+
+						<container class="fotmob_tabs">
+							<translation id="title" value="Analysis" type="use"/>
+
+							<!-- INFO TAB -->
+							<container id="form">
+								<translation id="title" type="use" value="! Formations" />
+								<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+								<container>
+									<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8" horizontal_offset="16" vertical_inset="16"/>
+									<record id="object_property" get_property="objt" set_property="objt"/>
+
+									<!-- MATCH STATS -->
+									<container class="tcs_table">
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+										<widget class="match_formation_panel" id="hmtt" file="match/match formation panel review" team_index="0" read_only="true">
+											<record id="object_property" get_property="objt" set_property="objt"/>
+										</widget>
+
+									</container>
+
+									<!-- NOTABLE EVENTS -->
+									<container class="tcs_table" >
+										<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+										<widget class="match_formation_panel" id="amtt" file="match/match formation panel review" team_index="1" read_only="true">
+											<record id="object_property" get_property="objt" set_property="objt"/>
+										</widget>
+									</container>
+								</container>
+							</container>
+
+
+							<widget class="match_analysis_panel" file="match/woz/analysis H" id="manL" team_index="0">
+								<boolean id="save_session_state" value="true" />
+								<boolean id="save_default_state" value="true" />
+								<translation id="title" translation_id="420623" type="use"/>
+								<record id="object_property" get_property="objt" set_property="objt"/>
+							</widget>		
+
+
+							<widget class="team_tactics_overview_panel" file="match/woz/analysis P" id="manP"> 
+								<boolean id="save_session_state" value="true" />
+								<boolean id="save_default_state" value="true" />
+								<translation id="title" translation_id="420702" type="use"/>
+								<record id="object_property">
+									<integer id="get_property" value="objt" />
+									<integer id="set_property" value="objt" />
+								</record>
+							</widget> 
+
+
+						</container>
+					</container>
+
+				</container>
+			</container>
+
+			<container height="84" />
+		</container>
+	</container>
+
+</panel>

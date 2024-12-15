@@ -1,0 +1,32 @@
+<panel>
+	<layout class="centre_in_parent_attachment" alignment="all" apply_to_children="true" offset="0"/>
+  
+	<container id="funk" class="inner_box" appearance="boxes/inner/no margin/paper" height="75" width="130">
+		<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="2" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="2"/>
+
+		<container>
+			<layout class="arrange_horizontal_attachment" layout="-9,-5" offset="2" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0"/>
+
+			<widget class="object_portrait_picture" id="pict" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+				<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+
+				<record id="object_property">
+					<integer id="get_property" value="objt"/>
+					<integer id="set_property" value="objt"/>
+				</record>
+			</widget>
+
+			<widget class="text" id="bsnm" alignment="centre" size="13" colour="white" style="bold"/>
+		</container>
+
+		<container class="bordered_box" id="nmcn" cached="true" rthr="68" appearance="boxes/custom/solid/rounded/paper" height="26">
+
+			<widget class="text" id="name" size="xsmall" alignment="centre,can_scale" multiline="false" height="14" style="semi_bold">
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="3"/>
+			</widget>
+		</container>
+	</container>
+</panel>

@@ -1,0 +1,59 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<!-- CONTENT -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<!-- TCS HEADER -->
+		<widget class="tcs_header" section="Ppin" >
+			<translation id="text" type="use" translation_id="322068" />
+		</widget>
+		
+        <!-- Player status flags -->
+        <container class="player_availability_panel" id="pavl" >
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+		</container>
+
+	<container class="main_subtle_box" height="50">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="16"/>
+
+		<!-- LEFT FOOT -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="4"/>
+
+			<record id="default_properties" alignment="right,centre_y" />
+
+			<!-- FOOTEDNESS -->
+			<widget class="player_condition_icon_widget" appearance="" >
+				<boolean id="label_disabled" value="true" />
+				<record id="object_property" get_property="PcOI"/>
+			</widget>
+
+			<!-- LABEL -->
+			<widget class="label" font="label">
+				<translation id="text" type="use" value="Condition" />
+			</widget>
+		</container>
+
+		<!-- LEFT FOOT -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="4"/>
+
+			<record id="default_properties" alignment="left,centre_y" />
+
+			<!-- FOOTEDNESS -->
+			<widget class="player_match_sharpness_icon_widget" appearance="" >
+				<boolean id="label_disabled" value="true" />
+				<record id="object_property" get_property="PftI"/>
+			</widget>
+
+			<!-- LABEL -->
+			<widget class="label" font="label">
+				<translation id="text" type="use" value="Sharpness" />
+			</widget>
+		</container>
+
+	</container>
+</panel>

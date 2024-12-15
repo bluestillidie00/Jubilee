@@ -1,0 +1,118 @@
+<panel navigation_container="true">
+	<container id="SUBP">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="8" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="tcs/icons/interface/selector" red_replacement="secondary" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="right,top" inset="8,14" />
+	</widget>
+
+	<record id="default_properties" late_loading="true"/>
+
+	<widget class="player_positions_indicator_panel" id="ppi1" file="player/player positions indicator small horizontal">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+		<translation id="title" translation_id="330376" type="use" />
+	</widget>
+
+	<!-- POLYGONS -->
+	<!-- ATTRIBUTE ANALYSIS -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/attanal" id="AttA" >
+		<translation id="title" translation_id="334971" type="use"  />
+		<translation id="subtitle" value="Polygon" type="use"  />
+	</widget>
+
+	<!-- DNA -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/dna_holder" id="dnaA" >
+		<translation id="title" value="DNA" type="use"  />
+		<translation id="subtitle" value="Polygon" type="use"  />
+	</widget>
+
+	<!-- SET PIECES -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/setpices_holder" id="pSPe" >
+		<translation id="title" translation_id="468242" type="use" />
+		<translation id="subtitle" value="Polygon" type="use"  />
+	</widget>
+	<!-- END OF POLYGONS -->
+
+	<!-- REPORTS -->
+	<!-- COMPARISON -->
+	<widget class="player_scout_reports_panel" file="player/tcs/overview/main/selectors/reports/overview" id="reOv" >
+		<translation id="title" translation_id="450832" type="use" />
+		<translation id="subtitle" translation_id="254774" type="use" />
+	</widget>
+
+	<widget class="player_scout_reports_panel" file="player/tcs/overview/main/selectors/reports/comparison" id="psCo" >
+		<translation id="title" translation_id="420686" type="use" />
+		<translation id="subtitle" translation_id="254774" type="use" />
+	</widget>
+
+	<!-- PROS AND CONS LIST -->
+	<widget class="player_scout_reports_panel" file="player/tcs/overview/main/selectors/reports/pc text" id="prct" >
+		<translation id="title" value="Pros and Cons (List)" type="use" />
+		<translation id="subtitle" translation_id="254774" type="use" />
+	</widget>
+
+	<!-- PROS AND CONS ICONS -->
+	<widget class="player_scout_reports_panel" file="player/tcs/overview/main/selectors/reports/pc icons" id="prcI" >
+		<translation id="title" value="Pros and Cons (Icons)" type="use" />
+		<translation id="subtitle" translation_id="254774" type="use" />
+	</widget>
+	<!-- END OF REPORTS -->
+
+	<!-- PLAYER PERFORMANCE -->
+	<widget class="player_scout_reports_panel" id="sSRe" late_loading="true" file="player/tcs/overview/main/selectors/big/player_perf">
+		<translation id="title" translation_id="491844" type="use"/>
+	</widget>
+
+	<!-- MILESTONES -->
+	<widget class="player_history_achievements_panel" id="PHac" late_loading="true" file="player/tcs/overview/main/selectors/big/milestones">
+		<translation id="title" translation_id="435775" type="use" />
+	</widget>
+
+	<!-- CAREER STATS -->
+	<widget class="playing_history_summary_panel" id="csts" file="player/tcs/overview/main/selectors/big/career_stats" >
+		<translation id="title" translation_id="247605" type="use" value="History Summary[COMMENT: retired person profile; header text on panel which summarises their career history in the form of a condensed career history list]" />
+	</widget>
+
+	<!-- ELIGIBILTY -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/eligbility" id="elig" >
+		<translation id="title" translation_id="260816" type="use" />
+	</widget>
+
+	<!-- PERSONAL DETAILS -->
+	<widget class="player_personal_details_panel" file="player/tcs/overview/main/selectors/big/personal_details" id="pede" >
+		<translation id="title" translation_id="247436" type="use" />
+	</widget>
+
+	<!-- PLAYING TIME -->
+	<widget class="person_chemistry_relationship_panel" id="PlaT" file="player/tcs/overview/main/selectors/big/playing_time" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false">
+		<translation id="title" translation_id="491902" type="use" />
+	</widget>
+
+	<!-- RECENT FORM -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/form" id="form" >
+		<translation id="title" translation_id="421076" type="use" />
+	</widget>
+	
+	<!-- SELECTION -->
+	<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/selection" id="sele">
+		<translation id="title" translation_id="322068" type="use" />
+	</widget>
+	
+	<!-- SELECTION -->
+	<widget class="player_injury_panel" file="player/tcs/overview/main/selectors/big/condition" id="medi">
+		<translation id="title" translation_id="394524" type="use" />
+	</widget>
+
+	<!-- RELATIONSHIP WITH YOU 
+	<widget class="person_chemistry_relationship_panel" id="Prel" file="player/tcs/overview/details/selector/header/relationship_with_you" valid_for_unemployed_player="false" valid_for_international_managers_other_team="false" valid_for_other_team_managers="false" valid_for_unemployed_managers="false"> 
+		<translation id="title" translation_id="243508" type="use" />
+	</widget> -->
+
+	<!-- TRANSFER STATUS 
+	<widget class="player_transfer_information_panel" id="Ptin" file="player/tcs/overview/details/selector/header/transfer_details" >
+		<translation id="title" translation_id="227953" type="use" />
+	</widget> -->
+
+</panel>

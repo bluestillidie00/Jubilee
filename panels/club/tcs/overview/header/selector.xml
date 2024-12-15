@@ -1,0 +1,182 @@
+<panel>
+    <container id="SUBP" class="title_link_box">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="2,0,0,0" />
+    </container>
+
+    <record id="default_properties" late_loading="true"/>
+
+    <!-- HISTORY -->
+    <!-- LEAGUE HISTORY -->
+    <widget class="club_league_history_graph" id="clhg" file="club/tcs/overview/header/league history" section="cmps">
+        <translation id="title" translation_id="319446" type="use" value="League History[COMMENT: title for the league position history on the club overview panel]" />
+        <translation id="subtitle" translation_id="229719" type="use" />
+    </widget>
+
+    <!-- TROPHIES -->
+    <widget class="team_container_honours_panel" id="tchp" honour_subpanel_filename="club/tcs/overview/header/trophies widget" file="club/tcs/overview/header/trophies" section="trov">
+        <translation id="title" translation_id="321147" type="use" value="Trophies Won" />
+        <translation id="subtitle" translation_id="229719" type="use" />
+        <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
+
+    <!-- TROPHIES SMALL -->
+    <widget class="team_container_honours_panel" id="tchs" honour_subpanel_filename="human/welcome to team honours info panel" file="human/welcome to team honours panel" section="trov">
+        <translation id="title" type="use" value="Trophies Won (Small)" />
+        <translation id="subtitle" translation_id="229719" type="use" />
+        <record id="object_property" get_property="objt" set_property="objt"/>
+    </widget>
+    <!-- END OF HISTORY -->
+
+    <!-- PERSONNAL -->
+    <!-- PENDING TRANSFER -->
+    <widget class="team_transfer_snapshot_panel" id="Tran" valid_for_fmc="false">
+        <!-- <translation id="title" translation_id="296337" type="use" value="Pending Transfers" /> -->
+        <translation id="title" type="use" value="Pending Transfers NEEDS FIXING" />
+        <translation id="subtitle" type="use" value="Personall" />
+    </widget>
+
+    <!-- TEAM INJURIES -->
+    <widget class="team_snapshot_injury_panel" id="tsin" late_loading="true" valid_for_unemployed_manager="false">
+        <translation id="title" translation_id="298734" type="use" value="Team Injuries[COMMENT:title for a box containing a list of a team's injuries]" />
+        <translation id="subtitle" type="use" value="Personall" />
+    </widget>
+
+    <!-- MANAGER -->
+    <widget class="client_object_viewer_xml_panel" id="mana" late_loading="true" file="club/tcs/overview/header/manager">
+        <translation id="title" translation_id="227981" type="use" />
+        <translation id="subtitle" type="use" value="Personall" />
+    </widget>
+
+    <!-- KEY STAFF -->
+    <widget class="club_overview_staff_panel" id="keys" late_loading="true" file="club/tcs/overview/header/key staff">
+        <translation id="title" translation_id="509699" type="use" />
+        <translation id="subtitle" type="use" value="Personall" />
+    </widget>
+    <!-- END OF PERSONNAL -->
+
+    <!-- FIXTURES AND RESULTS -->
+    <container id="upfx" section="TeFi">
+        <translation id="title" translation_id="247326" type="use" value="Fixtures &amp; Results"/>
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <container class="manager_upcoming_fixtures_panel" id="upfx" file="club/tcs/overview/header/fixtures">
+            <record id="object_property" get_property="TCsf" set_property="objt"/>
+        </container>
+    </container>
+
+    <!-- CLUB INFORMATION -->
+    <!-- OVERVIEW    -->
+    <widget class="club_overview_details_panel" id="clod" section="csio" file="club/tcs/overview/header/club_information">
+        <translation id="title" type="use" value="Overview" />
+        <translation id="subtitle" type="use" value="Club Information" />
+    </widget>
+	
+    <widget class="club_overview_details_panel" id="clor" section="csir" file="club/tcs/overview/header/club_information_rich">
+        <translation id="title" type="use" value="Overview Sugar Daddy" />
+        <translation id="subtitle" type="use" value="Club Information" />
+    </widget>
+
+    <!-- COMPETITIONS -->
+    <widget class="club_overview_details_panel" id="clmp" section="csio" file="club/tcs/overview/header/competition_info">
+        <translation id="title" type="use" value="Competitions" />
+        <translation id="subtitle" type="use" value="Club Information" />
+    </widget>
+
+    <!-- CLUB BACKGROUND -->
+    <widget class="team_container_information_background_panel" id="Cbac" section="NRec">
+        <translation id="title" translation_id="333728" type="use" value="Club Background[COMMENT: title for panel showing a club's background]" />
+        <translation id="subtitle" type="use" value="Club Information" />
+    </widget>
+
+    <!-- KITS -->
+    <widget class="club_overview_kits_panel" id="Ckit">
+        <translation id="title" translation_id="319448" type="use" />
+        <translation id="subtitle" type="use" value="Club Information" />
+    </widget>
+
+    <!-- KITS AND COLOURS 
+    <widget class="club_overview_kits_panel" file="club/tcs/overview/header/kits alt" id="Cktc" section="trov">
+        <translation id="title" translation_id="293549" type="use" />
+        <translation id="subtitle" type="use" value="Club Information" />
+    </widget> -->
+
+    <!-- RIVALRIES -->
+    <container class="scrolling_box" id="rivl">
+        <translation id="title" translation_id="364723" type="use" value="Rivalries" />
+        <translation id="subtitle" type="use" value="Club Information" />
+
+        <container>
+            <attachment_group class="vertical_arrange_autosize"/>
+
+            <!--Derbies-->
+            <container class="tcs_table">
+                <attachment_group class="vertical_arrange_autosize" alignment="top,extend"/>
+                <widget class="label" id="TDeL" auto_size="vertical">
+                    <record id="object_property" name="true">
+                        <string id="get_property" value="TDer" />
+                    </record>
+                    <string id="font" value="label" />
+                </widget>
+                <widget class="team_derbies_text" id="TDeV" auto_size="all">
+                    <record id="object_property">
+                        <string id="get_property" value="TDer" />
+                    </record>
+                </widget>
+
+            </container>
+
+            <!--Fierce Rivals-->
+            <container class="tcs_table_trans">
+                <attachment_group class="vertical_arrange_autosize" alignment="top,extend" horizontal_offset="0" vertical_gap="0" vertical_inset="0" />
+                <widget class="label" id="CfmL" auto_size="vertical">
+                    <record id="object_property" name="true">
+                        <string id="get_property" value="Cfmr" />
+                    </record>
+                    <string id="font" value="label" />
+                </widget>
+                <widget class="club_rivalries_list_text" id="CfmV" auto_size="vertical">
+                    <record id="object_property">
+                        <string id="get_property" value="Cfmr" />
+                    </record>
+                </widget>
+            </container>
+
+            <container class="tcs_table">
+                <attachment_group class="vertical_arrange_autosize" alignment="top,extend"/>
+                <widget class="label" id="CfrL" auto_size="vertical">
+                    <record id="object_property" name="true">
+                        <string id="get_property" value="Cfrt" />
+                    </record>
+                    <string id="font" value="label" />
+                </widget>
+                <widget class="club_rivalries_list_text" id="CfrV" auto_size="vertical">
+                    <record id="object_property">
+                        <string id="get_property" value="Cfrt" />
+                    </record>
+                </widget>
+            </container>
+        </container>
+    </container>
+    <!-- END OF CLUB INFORMATION -->
+    
+    
+    <!-- PERFORMANCE -->
+    <!-- CLUB BACKGROUND -->
+    <widget class="client_object_viewer_xml_panel" id="cPpa" file="club/tcs/overview/header/past positions">
+        <translation id="title" translation_id="243284" type="use" />
+        <translation id="subtitle" type="use" translation_id="284283" />
+    </widget>
+    
+    <!-- PERFORMANCE -->
+    <!-- CLUB BACKGROUND -->
+    <widget class="competition_news_panel" id="cLgT" file="club/tcs/overview/header/league table">
+        <translation id="title" translation_id="248082" type="use" />
+        <translation id="subtitle" type="use" translation_id="284283" />
+    </widget>
+    <!-- MODULAR 
+    <container class="client_object_viewer_xml_panel" file="club/tcs/overview/header/modular" id="modu">
+        <translation id="title" type="use" value="Modular" />
+    </container> -->
+
+</panel>

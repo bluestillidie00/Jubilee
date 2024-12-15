@@ -1,0 +1,13 @@
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+    <!-- TCS HEADER -->
+    <widget class="tcs_header" section="Pply" >
+        <translation id="text" type="use" value="DNA" />
+    </widget>
+
+    <!-- Outfield player -->
+    <container class="person_attributes_analyser_panel" id="ofap" file="player/tcs/overview/main/selectors/big/dna" >
+        <record id="object_property" get_property="objt" set_property="objt"/>
+    </container>
+</panel>

@@ -1,0 +1,26 @@
+<class class="attribute_star" parent="position_role_duty_star_range_based_picture">
+    <list id="value_list">
+        <record value="0" file="icons/custom/role rating/condensed/1" />
+        <record value="1" file="icons/custom/role rating/condensed/1" />
+        <record value="2" file="icons/custom/role rating/condensed/2" />
+        <record value="3" file="icons/custom/role rating/condensed/2" />
+        <record value="4" file="icons/custom/role rating/condensed/3" />
+        <record value="5" file="icons/custom/role rating/condensed/3" />
+        <record value="6" file="icons/custom/role rating/condensed/4" />
+        <record value="7" file="icons/custom/role rating/condensed/4" />
+        <record value="8" file="icons/custom/role rating/condensed/5" />
+        <record value="9" file="icons/custom/role rating/condensed/5" />
+        <record value="10" file="icons/custom/role rating/condensed/6" />
+        <record value="11" file="icons/custom/role rating/condensed/6" />
+        <record value="12" file="icons/custom/role rating/condensed/7" />
+        <record value="13" file="icons/custom/role rating/condensed/7" />
+        <record value="14" file="icons/custom/role rating/condensed/8" />
+        <record value="15" file="icons/custom/role rating/condensed/8" />
+        <record value="16" file="icons/custom/role rating/condensed/9" />
+        <record value="17" file="icons/custom/role rating/condensed/9" />
+        <record value="18" file="icons/custom/role rating/condensed/9" />
+        <record value="19" file="icons/custom/role rating/condensed/9" />
+        <record value="20" file="icons/custom/role rating/condensed/10" />
+
+    </list>
+</class>

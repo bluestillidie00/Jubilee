@@ -1,0 +1,45 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<!-- MAIN CONTENT -->
+	<container id="ovvw" >
+		<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+		<!-- COACHING -->
+		<container class="team_staff_subteam_panel" id="soc1" file="team/team staff subteam vertical">
+		</container>
+
+		<!-- RECRUITMENT -->
+		<container class="team_staff_subteam_panel" id="soc2" file="team/team staff subteam vertical">
+		</container>
+
+		<!-- MEDICAL TEAM -->
+		<container class="team_staff_subteam_panel" id="soc3" file="team/team staff subteam vertical">
+		</container>
+	</container>
+
+	<!-- FOOTER -->
+		<container height="31">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<!-- STAFF HYPERLINKS -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left" />
+				<container class="horizontal_arrange_container" entity_layout_id="at05" id="btns" height="31" auto_size="horizontal">
+				</container>
+			</container>
+
+			<!-- RESPONSIBILITIES -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+				<widget class="widget_popup_button" entity_layout_id="at00" id="staR" auto_size="all" needs_width="true" needs_height="true" appearance="buttons/subtle/normal/button">
+					<translation id="text" translation_id="335274" type="use" value="Responsibilities[COMMENT: Manager main/top menu: national team options when team name is not visible]" />
+					<string id="icon" value="icons/16px/staff respo" />
+					<string id="popup_alignment" value="centre_x, top" />
+					<string id="widget_type" value="group_responsibility_list_widget" />
+					<record id="widget_properties" file="team/staff responsibility summary popup panel" width="800" height="520" />
+				</widget>
+			</container>
+		</container>
+
+	</panel>

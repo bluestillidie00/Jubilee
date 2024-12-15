@@ -1,0 +1,87 @@
+<panel dont_set_embedded_title="true">
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+	
+	<container height="32" bkcl="red">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="middle"/>
+
+		<!-- OVERALL -->
+		<container width="40">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	 
+			<widget class="icon_button" id="ovrO" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/training general" icon_colour="fg" width="40">
+				<translation id="hint" translation_id="229298" type="use"/>
+			</widget>
+
+			<widget class="icon_button" id="ovrC" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/cross" icon_colour="fg" width="40" hidn="true">
+				<translation id="hint" translation_id="249644" type="use"/>
+			</widget>
+		</container>
+
+		<!-- DEFENCE -->
+		<container width="40">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	 
+			<widget class="icon_button" id="defO" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/training defending" icon_colour="fg" width="40">
+				<translation id="hint" translation_id="229719" type="use"/>
+			</widget>
+
+			<widget class="icon_button" id="defC" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/cross" icon_colour="fg" width="40" hidn="true">
+				<translation id="hint" translation_id="249644" type="use"/>
+			</widget>
+		</container>
+		
+		<!-- MIDFIELD -->
+		<container width="40">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	 
+			<widget class="icon_button" id="midO" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/training technical" icon_colour="fg" width="40">
+				<translation id="hint" translation_id="229719" type="use"/>
+			</widget>
+
+			<widget class="icon_button" id="midC" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/cross" icon_colour="fg" width="40" hidn="true">
+				<translation id="hint" translation_id="249644" type="use"/>
+			</widget>
+		</container>
+		
+		<!-- ATTACK -->
+		<container width="40">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	 
+			<widget class="icon_button" id="attO" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/training attacking" icon_colour="fg" width="40">
+				<translation id="hint" translation_id="229719" type="use"/>
+			</widget>
+
+			<widget class="icon_button" id="attC" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/cross" icon_colour="fg" width="40" hidn="true">
+				<translation id="hint" translation_id="249644" type="use"/>
+			</widget>
+		</container>
+
+		<!-- SET PEICE -->
+		<container width="40">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	 
+			<widget class="icon_button" id="spcO" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/training set pieces" icon_colour="fg" width="40">
+				<translation id="hint" translation_id="229719" type="use"/>
+			</widget>
+
+			<widget class="icon_button" id="spcC" alignment="right,centre_y" icon_alignment="centre_x,centre_y" appearance="buttons/primary/normal/button" rrep="popup_box_background" icon="icons/16px/cross" icon_colour="fg" width="40" hidn="true">
+				<translation id="hint" translation_id="249644" type="use"/>
+			</widget>
+		</container>
+	 
+	 
+	</container>
+	
+	<container bkcl="blue">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	
+		<!-- OVERALL -->
+		<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/attanal2notitle" id="OveG">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	
+	
+	
+	</container>
+
+</panel>

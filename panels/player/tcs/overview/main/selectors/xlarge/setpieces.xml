@@ -1,0 +1,34 @@
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+    <!-- TCS HEADER -->
+    <widget class="tcs_header" section="Pply" >
+        <translation id="text" type="use" translation_id="468242" />
+    </widget>
+
+    <container class="horizontal_adaptive_container" offset="0" inset="0" gap="8" mode="distribute_equally">
+
+        <container minimum_width="300" priority="1" default_width="-1" class="tcs_subtle_box">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+            <!-- Outfield player -->
+            <container class="person_attributes_analyser_panel" id="ofap" file="player/player attribute analyser outfield" >
+                <record id="object_property" get_property="Pigo" set_property="hidn"/>
+            </container>
+
+            <!-- Goalkeeper -->
+            <container class="person_attributes_analyser_panel" file="player/player attribute analyser goalkeeper" id="gkap">
+                <record id="object_property" get_property="Pigo" set_property="Shwn"/>
+            </container>
+        </container>
+
+        <container minimum_width="300" priority="1" default_width="-1" class="tcs_subtle_box">
+            <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+            <container class="person_attributes_analyser_panel" id="ofap" file="player/tcs/overview/main/selectors/big/setpieces" >
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </container>
+        </container>
+
+    </container>
+</panel>

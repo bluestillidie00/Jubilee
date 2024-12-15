@@ -1,0 +1,32 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<!-- TCS HEADER -->
+	<widget class="tcs_header" section="" >
+		<translation id="text" translation_id="251391" type="use" value="Bookmarks[COMMENT: top menu title for bookmarks menu]" />
+		<translation id="hint" type="use" value="CTRL + D - to bookmark a page -- Click the top right globe - then bookmarks in the top menu - Then manage bookmarks (here you can edit, delete or add bookmarks)" />
+	</widget>
+
+	<!--bookmarks area-->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<!-- links -->
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<container class="scrolling_box">
+				<container class="tree_menu" id="bkmk">
+					<layout class="arrange_vertical_attachment" alignment="top" />
+					<layout class="fit_children_attachment" alignment="vertical,fill"/>
+
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" apply_to_children="true"/>
+					<integer id="size" value="9"/>
+					<!--	<flags id="colour" value="gold"/> -->
+					<!--	<flags id="background_colour" value="yellow"/> -->									
+				</container>
+			</container>
+		</container>
+	</container>
+</panel>

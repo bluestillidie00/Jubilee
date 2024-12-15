@@ -1,0 +1,21 @@
+<panel navigation_container="true">
+    <container id="SUBP">
+        <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0,0,0,24" />
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+    </container>
+
+    <widget class="popup_button" id="popv" secondary_icon_enabled="false" icon="icons/16px/settings_disabled" red_replacement="fg lighter" auto_size="horizontal" height="16" click_event="msis" appearance="buttons/custom/customise panel/button" icon_colour="fg darker" fixed="true" navigation_focus_target="true">
+        <layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="top" inset="10"/>
+    </widget>
+
+    <!-- NAME -->
+    <widget file="club/tcs/overview/header/modular/clubname" id="name" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="319435" type="use" />
+    </widget>
+    
+    <!-- NICKNAME -->
+    <widget file="club/tcs/overview/header/modular/nickname" id="ninm" class="client_object_viewer_xml_panel" late_loading="true">
+        <translation id="title" translation_id="319435" type="use" />
+    </widget>
+</panel>

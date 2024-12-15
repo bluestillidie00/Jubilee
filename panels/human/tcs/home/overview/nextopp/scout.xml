@@ -1,0 +1,51 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="vertical_adaptive_container" gap="8">
+
+		<!-- PROS AND CONS -->
+		<container class="team_pro_con_summary_panel" id="tpcs" default_height="-1" file="none" draw_vertical_dividers="true">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="16"/>
+
+			<integer id="num_pro_cons_to_show" value="10" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+
+			<!-- STRENGTHS -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="8" offset="0" />
+
+				<widget class="link_button_title" font="title" colour="positive" auto_size="all" section="TSRp" red_replacement="positive">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"  />
+					<translation id="text" translation_id="420664" type="use" value="Strengths[COMMENT: team report, strengths (positives) section]" />
+				</widget>
+
+				<widget class="table" mode="fill_rows,stripe_rows" id="prot" layout="-1" inset="0" auto_size="none" fixed_size_rows="false" auto_size_rows="true">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"  />
+				</widget>
+			</container>
+
+			<!-- WEAKNESS -->
+			<container>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="8" offset="0" />
+
+				<widget class="link_button_title" spec="text" font="title" colour="negative" auto_size="all" section="TSRp" red_replacement="negative">
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0"  />
+					<translation id="text" translation_id="420665" type="use" value="Weaknesses[COMMENT: team report, weaknesses (negatives) section]" />
+				</widget>
+
+				<widget class="table" mode="fill_rows,stripe_rows" id="cont" layout="-1" inset="0" auto_size="none" fixed_size_rows="false" auto_size_rows="true">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"  />
+				</widget>
+			</container>
+		</container>
+
+		<container class="tcs_subtle_box" default_height="258">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<!-- COMPARISON -->
+			<container class="team_squad_comparison_panel" id="scmp" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</container>
+		</container>
+
+	</container>
+</panel>

@@ -1,0 +1,107 @@
+<properties version="1.0">
+
+	<!-- TCS ACCENT COLOURS -->
+	<colour name="tcs_accent" value="rgb(93,174,232)"/>
+	<colour name="tcs_accent_darker" value="rgb(53,124,182)"/>
+	<colour name="tcs_accent_alt" value="rgb(252,231,98)"/>
+	
+	<colour name="tcs_palette1" value="rgb(239,121,138)"/><!-- #EF798A -->
+	<colour name="tcs_palette2" value="rgb(247,169,168)"/><!-- #F7A9A8 -->
+	<colour name="tcs_palette3" value="rgb(229,195,209)"/><!-- #E5C3D1 -->
+	
+	<!-- BOX COLOURS -->
+	<colour name="bg darker" value="rgb(20,22,23)"/>
+	<colour name="bg" value="rgb(34,36,37)"/>
+	<colour name="bg lighter" value="rgb(45,46,47)"/>
+	
+	<!-- GRAPHIC COLOURS -->
+	<colour name="fg accent" value="tcs_accent"/>
+	<colour name="fg tertiary" value="tcs_accent_alt"/>
+	<colour name="bg tactics green dark" value="bg"/>
+
+	<colour name="result_background" value="bg accent"/>
+
+	<!-- TEXT COLOURS -->
+	<colour name="accent" value="tcs_accent"/>
+	<colour name="title" value="tcs_accent"/>
+	<colour name="human controlled" value="tcs_accent"/>
+	<colour name="press conference summary quote" value="tcs_accent"/>
+
+	<!-- TACTICS PITCH -->
+	<colour name="pitch_box_background" value="bg"/>
+	<colour name="style_background" value="bg lighter"/>
+	
+	<!-- POSITIONS -->
+	<colour name="goalkeeper_line" value="rgb(0, 38, 77)"/>
+	<colour name="defender_line" value="rgb(0,102,102)"/>
+	<colour name="defensive_midfielder_line" value="blue grey 800"/>
+	<colour name="midfielder_line" value="blue 800"/>
+	<colour name="attacking_midfielder_line" value="rgb(0, 89, 200)"/>
+	<colour name="attacker_line" value="rgb(103, 43, 68)"/>
+	<colour name="substitutes_line" value="fg"/>
+
+	<!-- ATHLETIC COLOURS -->
+	<colour name="athletic_attacking" value="rgb(14,112,191)"/><!-- #0e70bf -->
+	<colour name="athletic_defending" value="rgb(236,49,58)"/><!-- #ec313a -->
+	<colour name="athletic_possession" value="rgb(25,218,137)"/><!-- #19da89 -->
+	<colour name="athletic_gk" value="rgb(231,217,110)"/><!-- #e7d96e -->
+	
+	<!-- MUSTERMANN -->
+	<colour name="bg int" value="rgb(75,76,78)"/>
+
+	<colour name="mustermann0" value="rgb(0,29,38)"/>
+	<colour name="mustermann1" value="rgb(0,49,58)"/>
+	<colour name="mustermann2" value="rgb(5,69,78)"/>
+	<colour name="mustermann3" value="bg"/>
+	<colour name="mustermann4" value="athletic_attacking"/>
+	<colour name="mustermann5" value="rgb(65,129,138)"/>
+	<colour name="mustermann6" value="athletic_defending"/>
+	<colour name="mustermanntext" value="fg"/>
+
+	<colour name="gimn1" value="rgb(0,168,192)"/>
+	<colour name="gimn2" value="athletic_possession"/>
+	<colour name="gimn3" value="rgb(20,208,232)"/>
+	<colour name="gimntext" value="bg darker"/>
+
+	<!--CUSTOM PARAMETERS FOR THE SKIN-->
+	<colour name="pizza_attack" value="athletic_attacking"/>
+	<colour name="pizza_attack_border" value="white"/>
+	<colour name="pizza_defend" value="athletic_defending"/>
+	<colour name="pizza_defend_border" value="white"/>
+	<colour name="pizza_possess" value="athletic_possession"/>
+	<colour name="pizza_possess_border" value="white"/>
+	<colour name="pizza_keeper" value="athletic_gk"/>
+	<colour name="pizza_keeper_border" value="white"/>
+
+	<colour name="nipple_outer" value="tcs_accent"/>
+	<colour name="nipple_inner" value="tcs_accent_darker"/>
+
+	<colour name="doughnut_win" value="gimn2"/>
+	<colour name="doughnut_win_border" value="gimn1"/>
+	<colour name="doughnut_loss" value="mustermann4"/>
+	<colour name="doughnut_loss_border" value="mustermann3"/>
+
+	<!-- MATCHDAY -->
+	<colour name="tcs_gold" value="rgb(207,181,59)"/>
+	<colour name="tcs_gold_ligher" value="rgb(246,198,0)"/>
+	<colour name="tcs_gold_darker" value="rgb(135,116,27)"/>
+
+	<!-- ATTRIBUTE COLOURS -->
+	<colour name="low attribute" value="rgba(180,0,0)"/>
+	<colour name="normal attribute" value="faded text"/>
+	<colour name="good attribute" value="rgb(239,243,59)"/>
+	<colour name="excellent attribute" value="rgb(65,170,255)"/>
+	<colour name="unknown attribute background" value="bg darker"/>
+	<colour name="low attribute background" value="low attribute"/>
+	<colour name="normal attribute background" value="normal attribute"/>
+	<colour name="good attribute background" value="good attribute"/>
+	<colour name="excellent attribute background" value="excellent attribute"/>
+	<colour name="profile extra text" value="fg"/>
+
+	<!-- STAR RATING -->
+	<colour name="star rating senior" value="rgb(240,171,60)"/><!-- #f0ab3c -->
+	
+	<!-- GREEN PITCH -->
+	<colour name="default_pitch" value="rgb(0,125,63)"/>
+
+</properties>

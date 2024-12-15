@@ -1,0 +1,63 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+	<!-- TOP ROW -->
+	<container class="tcs_table">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+		<!-- DIVISION LABEL -->
+		<widget class="label" font="label" auto_size="horizontal">
+			<record id="object_property" get_property="Cdiv" name="true" />
+		</widget>
+
+		<!-- DIVISION -->
+		<widget class="comp_button" alignment="right,centre_y"> 
+			<record id="object_property" get_property="Cdiv" />
+		</widget>
+	</container>
+
+	<!-- 2ND ROW -->
+	<container class="tcs_table_trans">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+		<!-- CONTINENTAL COMP LABEL -->
+		<widget class="label" font="label" auto_size="horizontal">
+			<translation id="text" translation_id="319580" type="use" />
+		</widget>
+
+		<!-- CONTINENTAL COMP -->
+		<widget class="comp_button" alignment="right,centre_y" > 
+			<record id="object_property" get_property="Ccon" />
+		</widget>
+	</container>
+
+	<!-- 3RD ROW -->
+	<container class="tcs_table">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+		<!-- DIVISION POSITION LABEL -->
+		<widget class="label" font="label" auto_size="horizontal">
+			<record id="object_property" get_property="Cmai" name="true" />
+		</widget>
+
+		<!-- DIVISION POSITION -->
+		<widget class="division_position_button" id="Cmai"  alignment="right,centre_y">
+			<record id="object_property" get_property="Cmai" />
+		</widget>
+	</container>		
+
+	<!-- 4th ROW -->
+	<container class="tcs_table_trans">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+		<!-- MEDIA PREDICTION LABEL -->
+		<widget class="label" font="label" auto_size="horizontal">
+			<record id="object_property" get_property="CmeD" name="true" />
+		</widget>
+
+		<!-- MEDIA PREDICTION -->
+		<widget class="media_expectation_text" alignment="right,centre_y" > 
+			<record id="object_property" get_property="CmeD" />
+		</widget>
+	</container>
+</panel>

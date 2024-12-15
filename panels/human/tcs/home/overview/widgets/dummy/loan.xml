@@ -1,0 +1,16 @@
+<panel dont_set_embedded_title="true">
+	<container id="SUBP" class="inner_box_no_margin" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<!-- <widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="none" red_replacement="secondary" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="8" />
+	</widget>  -->
+
+	<record id="default_properties" late_loading="true"/>
+
+	<widget class="players_on_loan_panel" id="squa">
+		<translation id="title" type="use" translation_id="1" />
+	</widget>	
+</panel>

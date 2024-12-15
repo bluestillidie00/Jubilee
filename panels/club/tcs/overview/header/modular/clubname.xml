@@ -1,0 +1,13 @@
+<panel>
+	<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+	<!-- NICKNAME LABEL -->
+	<widget class="label" font="label" auto_size="horizontal">
+		<record id="object_property" get_property="dref" name="true" />
+	</widget>
+
+	<!-- DATE OF BIRTH -->
+	<widget class="club_button" alignment="right,centre_y"> 
+		<record id="object_property" get_property="dref" />
+	</widget>
+</panel>

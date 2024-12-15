@@ -1,0 +1,35 @@
+<panel dont_set_embedded_title="true">
+	<container id="SUBP" class="inner_box_no_margin" >
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+	</container>
+
+	<widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="none" red_replacement="secondary" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="8" />
+	</widget> 
+
+	<record id="default_properties" late_loading="true"/>
+
+	<!-- DATA HUB -->
+	<widget class="team_opposition_report_analyst_report_panel" file="team/team opposition report analytics panel" id="data">
+		<translation id="title" type="use" translation_id="539060" />
+	</widget>	
+
+	<!-- EXPECTED TACTIC -->
+	<widget class="team_opposition_overview_report_panel" id="exTa" file="human/tcs/home/overview/nextopp/expected">
+		<translation id="title" type="use" translation_id="331967" />
+	</widget>	
+
+	<widget class="team_opposition_scout_report_panel" id="scou" file="human/tcs/home/overview/nextopp/scout">
+		<translation id="title" type="use" translation_id="447661" />
+	</widget>	
+
+	<widget class="team_opposition_report_analyst_report_panel" id="lst5" file="human/tcs/home/overview/nextopp/last 5 matches">
+		<translation id="title" type="use" translation_id="535397" />
+	</widget>	
+
+	<widget class="team_opposition_report_analyst_report_panel" id="goal" file="human/tcs/home/overview/nextopp/goal analysis">
+		<translation id="title" type="use" translation_id="447607" />
+	</widget>	
+
+</panel>

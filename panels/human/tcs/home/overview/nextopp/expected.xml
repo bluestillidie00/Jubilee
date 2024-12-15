@@ -1,0 +1,77 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+	<widget class="data_hub_splashscreen" >
+		<record id="object_property" get_property="Ttea" dont_set_hint="true"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+		<container id="dflt">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+			<widget class="team_opposition_report_predicted_tactical_style_panel" id="topt" file="none">
+				<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+				<record id="object_property" get_property="objt" set_property="objt"/>
+
+				<!-- UPCOMING 
+				<widget id="fixt" class="team_upcoming_fixture_widget" file="none" auto_size="vertical" height="80">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<container width="190" class="tcs_subtle_box">
+						<attachment_group class="horizontal_arrange_vertical_autosize_centre" horizontal_alignment="left,extend" vertical_offset="0" horizontal_gap="8"/>
+
+						<widget class="object_portrait_picture" id="tpic" width="45" height="45" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" navigation_focus_target="true" />
+						<container>
+							<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" />
+
+							<widget class="text" id="vers" auto_size="vertical" size="large" style="semi_bold" />
+							<widget class="comp_button" id="comp" icon_enabled="true" show_button_appearance="false" auto_size="vertical"/>
+							<widget class="text" id="time" auto_size="vertical" colour="faded text" />
+						</container>
+					</container>
+				</widget> -->
+
+				<!-- SUMMARY -->
+				<container class="inner_box">
+					<attachment_group class="vertical_arrange_autosize" vertical_gap="12" vertical_alignment="top" horizontal_inset="6" />
+					<translation id="title" translation_id="331967" type="use" value="Summary[COMMENT: MLS draft panel; summary panel title]" />
+
+					<widget class="text" id="psmS" alignment="left,centre_y" auto_size="vertical" />
+				</container>
+
+				<container>
+					<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+					<!-- EXPECTED TACTIC -->
+					<widget class="pitch_with_tactics" id="otpc" pitch_vertical_padding="0" pitch_alignment="top,can_scale" vertical="true" pitch_is_read_only="true" player_icon_file="tactics/tactics icon opposition predicted team" icon_flags="show_name,show_number,show_role_duty_labels,dont_colour_names,dont_fade_icons,show_preview_info_popup" pitch_draw_grass="false" pitch_line_colour="text" />
+
+					<container>
+						<attachment_group class="vertical_arrange" vertical_layout="-1, -1" vertical_gap="8" />
+
+						<!-- EXPECTED STYLE -->
+						<container class="tcs_subtle_box">
+							<attachment_group class="vertical_arrange" horizontal_inset="0" />
+							<widget class="text" auto_size="vertical" font="title" id="styT" />
+							<widget class="text" auto_size="vertical" id="styD" />
+							<widget class="text" auto_size="vertical" id="opSD" />
+						</container>
+
+						<!-- EXPECTED SET PIECES -->
+						<container class="tcs_subtle_box">
+							<attachment_group class="vertical_arrange" horizontal_inset="0" />
+
+							<widget class="text" auto_size="vertical" font="title">
+								<translation id="text" translation_id="229307" type="use" value="Set Pieces[COMMENT - training category]" />
+							</widget>
+
+							<widget class="text" auto_size="vertical" id="spAD" />
+							<widget class="text" auto_size="vertical" id="spDD" />
+							<widget class="text" auto_size="vertical" id="spND" />		
+						</container>
+					</container>
+				</container>
+
+			</widget>
+		</container>
+	</widget>
+</panel>

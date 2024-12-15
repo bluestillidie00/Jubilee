@@ -1,0 +1,121 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+    <!-- ATTACKING -->
+    <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <container bkcl="bg lighter">
+            <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+            <record id="object_property" get_property="Piat" set_property="Shwn"/>
+
+            <container height="18">
+                <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+                <string id="skin_style" value="title link" />
+
+                <!-- Linked header -->
+                <widget class="link_button" section="cort" auto_size="all"  id="cort" >
+                    <translation id="text" translation_id="248884" type="use" />
+                </widget>
+            </container>
+
+            <!-- ATTACKER -->
+            <container class="person_attributes_analyser_panel" id="ofap" file="player/tcs/overview/main/selectors/archetypes/forward" >
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </container>
+        </container>
+
+        <container>
+            <attachment_group class="vertical_arrange_autosize" />
+            <record id="object_property" get_property="Piat" set_property="hidn"/>
+        </container>
+    </container>
+
+    <!-- MIDFIELDER -->
+    <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <container bkcl="bg lighter">
+            <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+            <record id="object_property" get_property="Pima" set_property="Shwn"/>
+
+            <container height="18">
+                <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+                <string id="skin_style" value="title link" />
+
+                <!-- Linked header -->
+                <widget class="link_button" section="cort" auto_size="all"  id="cort" >
+                    <translation id="text" translation_id="229441" type="use" />
+                </widget>
+            </container>
+
+            <!-- MIDFIELDER -->
+            <container class="person_attributes_analyser_panel" id="ofMi" file="player/tcs/overview/main/selectors/archetypes/midfielder" >
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </container>
+        </container>
+
+        <container>
+            <attachment_group class="vertical_arrange_autosize" />
+            <record id="object_property" get_property="Pima" set_property="hidn"/>
+        </container>
+    </container>
+
+    <!-- DEFENDER -->
+    <container>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+        <container bkcl="bg lighter">
+            <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+            <record id="object_property" get_property="Pide" set_property="Shwn"/>
+
+            <container height="18">
+                <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+                <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+                <string id="skin_style" value="title link" />
+
+                <!-- Linked header -->
+                <widget class="link_button" section="cort" auto_size="all"  id="cort" >
+                    <translation id="text" translation_id="292751" type="use" />
+                </widget>
+            </container>
+
+            <!-- DEFENDER -->
+            <container class="person_attributes_analyser_panel" id="ofDe" file="player/tcs/overview/main/selectors/archetypes/defender">
+                <record id="object_property" get_property="objt" set_property="objt"/>
+            </container>
+        </container>
+    </container>
+
+    <container>
+        <attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+        <record id="object_property" get_property="Pigo" set_property="Shwn"/>
+
+        <container height="18">
+            <layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+            <string id="skin_style" value="title link" />
+
+            <!-- Linked header -->
+            <widget class="link_button" section="cort" auto_size="all"  id="cort" >
+                <translation id="text" value="Goalkeeper" type="use" />
+            </widget>
+        </container>
+
+        <!-- MIDFIELDER -->
+      <container class="person_attributes_analyser_panel" file="player/player attribute analyser goalkeeper" id="gkap">
+            <record id="object_property" get_property="objt" set_property="objt"/>
+        </container>
+    </container>
+
+</panel>

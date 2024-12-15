@@ -1,0 +1,211 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container>
+		<layout class="horizontal_arrange" horizontal_layout="-10,-18" horizontal_gap="8"/>
+
+		<!-- MIDDLE -->
+		<container>
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend"/>
+
+			<container class="tcs_box" height="240">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+				<!-- PLAYER FACE AND LOGO -->
+				<container width="220">
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+					<!-- LOGO -->
+					<container>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="16" apply_to_children="true"/>
+
+						<container class="object_portrait_picture" id="lepi" scale_picture="true" keep_aspect_ratio="true" image_alignment="left" width="150" transparency="0.7">
+							<record id="object_property" get_property="objt" set_property="objt"/>
+						</container>
+					</container>
+
+					<!-- TROPHY -->
+					<container>
+						<container height="120" width="120">
+							<layout class="stick_to_sides_attachment" alignment="right" inset="12"/>
+							<layout class="stick_to_sides_attachment" alignment="bottom" inset="4"/>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+							<widget class="object_portrait_picture" id="trop" scale_picture="true" keep_aspect_ratio="true" comp_use_trophy_icon="true" image_alignment="centre">
+								<integer id="property" value="trop"/>
+								<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+								<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
+								<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+							</widget>
+						</container>
+					</container>
+				</container>
+
+				<!-- INFO -->
+				<container class="tcs_box">
+					<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+					<!-- DIVISION -->
+					<container class="tcs_table">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+						<!-- NAME -->
+						<widget class="label" font="label" alignment="left,centre_y" auto_size="horizontal">
+							<record id="object_property" get_property="comp" name="true"/>
+						</widget>
+
+						<!-- INFO -->
+						<container>
+							<attachment_group class="vertical_arrange" vertical_alignment="middle"/>
+
+							<record id="default_properties" alignment="centre_y,right" auto_size="vertical"/>
+
+							<!-- COMPETITION NAME -->
+							<widget class="comp_button" icon_enabled="false">
+								<record id="object_property" get_property="comp"/>
+							</widget>
+
+							<!-- REPUTATION -->
+							<widget class="comp_reputation_stars_label">
+								<record id="object_property" get_property="crps"/>
+							</widget>
+						</container>
+					</container>
+
+					<container class="tcs_table_trans">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+						<!-- NAME -->
+						<widget class="label" font="label" alignment="left,centre_y" auto_size="horizontal">
+							<record id="object_property" get_property="cnat" name="true"/>
+						</widget>
+
+						<!-- NATION -->
+						<widget class="nation_button" alignment="centre_y,right">
+							<record id="object_property" get_property="cnat"/>
+						</widget>
+					</container>
+
+					<!-- DATES -->
+					<container class="tcs_table">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+						<container class="competition_preview_panel" file="none">
+							<attachment_group class="vertical_arrange" vertical_alignment="fill"/>
+
+							<record id="object_property" get_property="objt" set_property="objt"/>
+
+							<!-- START DATE -->
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+								<!-- LABEL -->
+								<widget class="label" font="label" alignment="left,centre_y" auto_size="horizontal">
+									<translation id="text" type="use" translation_id="293013"/>
+								</widget>
+
+								<!-- DATE -->
+								<widget class="text" id="stDt" alignment="centre_y,right">
+								</widget>
+							</container>
+
+							<!-- END DATE -->
+							<container>
+								<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+								<!-- LABEL -->
+								<widget class="label" font="label" alignment="left,centre_y" auto_size="horizontal">
+									<translation id="text" type="use" translation_id="293014"/>
+								</widget>
+
+								<!-- DATE -->
+								<widget class="text" id="enDt" alignment="centre_y,right">
+								</widget>
+							</container>
+						</container>
+					</container>
+
+					<container class="tcs_table_trans">
+						<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend"/>
+
+						<!-- LABELS -->
+						<widget class="label" font="label" alignment="left,centre_y" auto_size="horizontal">
+							<record id="object_property" get_property="ChoR" name="true"/>
+						</widget>
+
+						<!-- NATION -->
+						<widget class="team_button" alignment="centre_y,right">
+							<record id="object_property" get_property="ChoR"/>
+						</widget>
+					</container>
+
+				</container>
+			</container>
+			</container>
+
+			<container class="tcs_box">
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+				<!-- LEAGUE TABLE -->
+				<widget class="competition_stage_panel" file="competition/tcs/overview/stage" id="cosg">
+					<record id="object_property">
+						<integer id="get_property" value="objt"/>
+						<integer id="set_property" value="objt"/>
+					</record>
+				</widget>
+
+				<!-- STATS 
+			<container class="tcs_subtle_box" height="100">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			
+			<container class="competition_news_side_panel" file="competition/mustermann/competition overview/prozone container" id="side" navigation_container="true" >
+				<record id="object_property">
+					<integer id="get_property" value="objt" />
+					<integer id="set_property" value="objt" />
+				</record>
+			</container> 
+			</container> -->
+			</container>
+		</container>
+
+		<container class="tcs_tabs" save_session_state="true" save_default_state="true">
+			<!-- RECORDS -->
+			<widget class="client_object_viewer_xml_panel" id="Over" file="competition/mustermann/competition overview/overview">
+				<translation id="title" translation_id="247414" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<widget class="competition_stats_overview_panel" id="cspl">
+				<translation id="title" translation_id="392260" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<widget class="competition_stats_overview_panel" id="cste" file="competition/competition team stats overview">
+				<translation id="title" translation_id="392263" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		
+			<!-- PAST WINNERS -->
+			<widget class="competition_history_panel" id="pstwn">
+				<translation id="title" translation_id="247942" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		
+			<widget class="client_object_viewer_xml_panel" id="misc" file="competition/tcs/overview/misctabs">
+				<translation id="title" value="Misc" type="use"/>
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+	</container>
+	
+	<container class="standard_popup_box" hidn="true">
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<widget class="competition_rules_panel" id="tRul">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+	</container>
+
+</panel>

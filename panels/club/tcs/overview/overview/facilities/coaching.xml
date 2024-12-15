@@ -1,0 +1,73 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_table">
+		<layout class="horizontal_arrange" horizontal_layout="80,-1" />
+
+		<!-- MANAGER LABEL -->
+		<widget class="label" font="label" auto_size="horizontal">
+			<translation id="text" type="use" value="Coaching" />
+		</widget>
+
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" horizontal_gap="4"/>
+
+			<boolean id="should_force_refresh" value="true"/>
+
+			<!-- PLAYER INFO -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+				<!-- FACE -->
+				<widget class="value_based_picture" file="tcs/icons/facilities/coaching" width="44" image_alignment="centre_x" >
+					<list id="value_list">
+						<record min_value="1" max_value="4" red_replacement="bg red"/>
+						<record min_value="5" max_value="8" red_replacement="bg range4"/>
+						<record min_value="9" max_value="11" red_replacement="bg range8"/>
+						<record min_value="12" max_value="14" red_replacement="bg range12"/>
+						<record min_value="15" max_value="17" red_replacement="bg range16"/>
+						<record min_value="18" max_value="20" red_replacement="bg green"/>
+					</list>
+					<record id="object_property" get_property="Cytv"/>
+				</widget>
+
+				<!-- INFO -->
+
+				<widget class="youth_coaching_status_label" style="semi_bold" alignment="left,centre_y" format="1">
+					<record id="object_property" get_property="Cyos"/>
+				</widget>
+			</container>
+
+			<!-- AGE -->        
+			<container class="tcs_table" width="45">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<widget class="text" style="semi_bold" alignment="centre">
+					<record id="object_property" get_property="Crcb"/>
+				</widget>
+			</container>
+
+			<!-- LEADERSHIP -->
+			<container class="tcs_table" width="92">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<widget class="value_based_picture"  image_alignment="centre_x" >
+					<list id="value_list">
+						<record min_value="1" max_value="2" file="icons/custom/role rating/stars/11"/>
+						<record min_value="3" max_value="4" file="icons/custom/role rating/stars/12"/>
+						<record min_value="5" max_value="6" file="icons/custom/role rating/stars/13"/>
+						<record min_value="7" max_value="8" file="icons/custom/role rating/stars/14"/>
+						<record min_value="9" max_value="10" file="icons/custom/role rating/stars/15"/>
+						<record min_value="11" max_value="12" file="icons/custom/role rating/stars/16"/>
+						<record min_value="13" max_value="14" file="icons/custom/role rating/stars/17"/>
+						<record min_value="15" max_value="16" file="icons/custom/role rating/stars/18"/>
+						<record min_value="17" max_value="18" file="icons/custom/role rating/stars/19"/>
+						<record min_value="19" max_value="20" file="icons/custom/role rating/stars/20"/>
+					</list>
+					<record id="object_property" get_property="Cytv"/>
+				</widget>
+			</container>
+
+		</container>
+	</container>
+</panel>

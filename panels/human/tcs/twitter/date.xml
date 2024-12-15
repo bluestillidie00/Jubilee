@@ -1,0 +1,9 @@
+<panel >
+    <attachment_group class="horizontal_arrange" horizontal_gap="16" />
+
+    <record id="default_properties" auto_size="horizontal" colour="fg" style="bold" disabled_colour="faded text" alignment="left,centre_y" size="9"/>
+
+    <widget class="text" id="dytm" />
+    <widget class="text" id="dtam" />
+
+</panel>

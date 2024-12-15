@@ -1,0 +1,17 @@
+<panel dont_set_embedded_title="true">
+	<container id="SUBP" class="inner_box_no_margin">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="2"/>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</container>
+
+	<!-- <widget class="popup_button" id="popv" auto_size="horizontal" height="15" click_event="msis" appearance="none" red_replacement="secondary" fixed="true">
+		<layout class="stick_to_sides_attachment" alignment="top,right" inset="8" />
+	</widget>  -->
+
+	<!-- General Performance (by Flut, edited FMRensie) -->
+	<widget class="data_analyst_visualisation_widget" id="xgsh" late_loading="true" visualisation_type="3" data_type="1" category="0" file="custom/data analyst visualisation mini home selector">
+		<translation id="title" type="use" value="General Performance[COMMENT: AREA: Inbox; SUB-AREA: Opposition Scouting; FR-BN: n/a; TONE: Informal; CHARLIMIT: None; REF-ID: n/a; NOTE: team report label]"/>
+		<!--<translation id="title" translation_id="282224" type="use" value="Overall[COMMENT: match analysis panel; title header]" />-->
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+</panel>

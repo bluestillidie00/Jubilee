@@ -1,0 +1,36 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_subtle_box">
+		<attachment_group class="vertical_arrange" vertical_alignment="middle,extend" />
+
+		<!-- IN XX DAYS -->
+		<widget class="text" id="time" spec="text" style="bold" alignment="centre" multiline="true" auto_size="vertical" size="small"/>
+
+		<!-- TEAM LOGO CONTAINER -->
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true"/>
+
+			<!-- TEAM LOGO -->
+			<widget class="fixture_opponent_picture" id="fopP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" transparency="0.95">
+				<record id="object_property" get_property="fopP"/>
+			</widget>
+		</container>
+
+		<!-- NAME AND COMP -->
+		<container>
+			<attachment_group class="vertical_arrange_autosize" vertical_alignment="middle" vertical_gap="2"/>
+
+			<!-- TEAM NAME -->
+			<widget class="fixture_opponent_venue_text" style="semi_bold" size="small" alignment="centre" auto_size="vertical">
+				<record id="object_property" get_property="fOpV"/>
+			</widget>
+
+			<!-- COMPETITION -->
+			<widget class="fixture_name_text" id="FxNm" alignment="centre_x" auto_size="vertical" size="xxsmall" multi_line="true">
+				<record id="object_property" get_property="FxNm"/>
+			</widget>
+
+		</container>
+	</container>
+</panel>

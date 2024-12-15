@@ -1,0 +1,25 @@
+<class class="attribute_circle" parent="position_role_duty_star_range_based_picture">
+    <list id="value_list">
+        <record value="0" file="tcs/icons/attributes/circles/0" />
+        <record value="1" file="tcs/icons/attributes/circles/10" />
+        <record value="2" file="tcs/icons/attributes/circles/10" />
+        <record value="3" file="tcs/icons/attributes/circles/20" />
+        <record value="4" file="tcs/icons/attributes/circles/20" />
+        <record value="5" file="tcs/icons/attributes/circles/30" />
+        <record value="6" file="tcs/icons/attributes/circles/30" />
+        <record value="7" file="tcs/icons/attributes/circles/40" />
+        <record value="8" file="tcs/icons/attributes/circles/40" />
+        <record value="9" file="tcs/icons/attributes/circles/50" />
+        <record value="10" file="tcs/icons/attributes/circles/50" />
+        <record value="11" file="tcs/icons/attributes/circles/60" />
+        <record value="12" file="tcs/icons/attributes/circles/60" />
+        <record value="13" file="tcs/icons/attributes/circles/70" />
+        <record value="14" file="tcs/icons/attributes/circles/70" />
+        <record value="15" file="tcs/icons/attributes/circles/80" />
+        <record value="16" file="tcs/icons/attributes/circles/80" />
+        <record value="17" file="tcs/icons/attributes/circles/90" />
+        <record value="18" file="tcs/icons/attributes/circles/90" />
+        <record value="19" file="tcs/icons/attributes/circles/100" />
+        <record value="20" file="tcs/icons/attributes/circles/100" />
+    </list>
+</class>

@@ -1,0 +1,22 @@
+﻿<panel height="280" width="280">
+	<string id="use_mini_visualisation" value="true" />
+
+	<container id="davb">
+		<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="top,extend" horizontal_inset="0" />
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		<container>
+			<attachment_group class="vertical_arrange" vertical_offset="0" vertical_alignment="bottom,extend" horizontal_inset="0" />
+			<container id="noDa" hidden="true">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+				<widget id="daTX" class="text" alignment="centre" style="semi_bold" colour="faded text">
+					<translation id="text" translation_id="515107" type="use" value="Not enough data available to create visualisation[COMMENT: AREA: Visualisation; SUB-AREA:; FR : 32932; TONE: Formal; CHARLIMIT: None; NOTE: warning to display when not enough data available to create a visualisation]" />
+				</widget>
+			</container>
+			<container class="vertical_arrange_container" inset="4" alignment="fill" id="visC" />
+
+		</container>
+	</container>
+
+</panel>

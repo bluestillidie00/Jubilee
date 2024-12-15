@@ -1,0 +1,62 @@
+﻿<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="tcs_table">
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+		<!-- TEAM AND COMP NAME-->
+		<container>
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<container width="50">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true"/>
+
+				<!-- TEAM LOGO -->
+				<widget class="fixture_opponent_picture" id="fopP" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre" transparency="0.95">
+					<record id="object_property" get_property="fopP"/>
+				</widget>
+			</container>
+
+			<!-- TEXT -->
+			<container>
+				<attachment_group class="vertical_arrange_horizontal_autosize" vertical_alignment="middle" vertical_gap="0"/>
+
+				<record id="default_properties" alignment="left" auto_size="all"/>
+
+				<!-- TEAM NAME -->
+				<widget class="fixture_opponent_venue_text" style="semi_bold" >
+					<record id="object_property" get_property="fOpV"/>
+				</widget>
+
+				<!-- COMPETITION -->
+				<widget class="fixture_name_text" id="FxNm" size="xsmall" multi_line="true" icon_enabled="true">
+					<record id="object_property" get_property="FxNm"/>
+				</widget>
+			</container>
+		</container>
+
+		<!-- RESULT AND ICON -->
+		<container>
+			<attachment_group class="horizontal_arrange_autosize" />
+
+			<!-- ICON -->
+			<widget class="fixture_result_icon" wants_mouse_events="false" auto_size="all">
+				<record id="object_property" get_property="FxRs"/>
+			</widget>
+
+			<!-- RESULT -->
+			<widget class="fixture_full_result_text" spec="text" style="bold" alignment="right,centre_y" multiline="false" format="[%scoreline#1-result_h_a_result]" width="40">
+				<record id="object_property" get_property="FxFR"/>
+			</widget>
+		</container>
+
+		<container width="50">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="8" apply_to_children="true"/>
+
+			<!-- COMP LOGO -->
+			<widget class="object_portrait_picture" id="fxCo" scale_picture="true" width="30" keep_aspect_ratio="true" image_alignment="centre">
+				<record id="object_property" get_property="fxCo" set_property="objt" />
+			</widget>
+		</container>
+	</container>
+</panel>

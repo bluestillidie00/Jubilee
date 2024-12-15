@@ -1,0 +1,24 @@
+<panel bkcl="bg lighter">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+		<container height="18">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" apply_to_children="true" />
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+
+			<string id="skin_style" value="title link" />
+
+			<!-- Linked header -->
+			<widget class="link_button" section="cort" auto_size="all"  id="cort" >
+				<translation id="text" translation_id="248884" type="use" />
+			</widget>
+		</container>
+
+		<!-- ATTACKER -->
+		<container class="person_attributes_analyser_panel" id="ofap" file="player/tcs/overview/main/selectors/archetypes/forward" >
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+	</container>
+</panel>

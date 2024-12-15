@@ -1,0 +1,158 @@
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<container class="horizontal_adaptive_container" id="adSP" gap="8">
+
+		<!-- LEFT -->
+		<container priority="1" minimum_width="250" default_width="450" id="pcCL" class="tcs_box">
+			<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+			<!-- MIDDLE PANEL -->
+			<container class="vertical_adaptive_container" gap="8">
+
+				<!-- ATTRIBUTES -->
+				<widget class="player_attributes_panel" id="patt" late_loading="true" dont_allow_custom_attribute_change_ranges="true" default_height="300" file="player/tcs/scouting/overview/attributes" priority="1">
+					<translation id="title" translation_id="229822" type="use" value="Attributes" />
+					<record id="object_property" get_property="Pers" />
+				</widget>
+
+				<!-- LAST 10 GAMES -->
+				<widget class="player_additional_stats_panel" file="none" id="la20" default_height="-1" priority="1" minimum_height="150">
+					<record id="object_property" get_property="objt" set_property="objt" />
+					<layout class="stick_to_sides_attachment" apply_to_children="true"/>		
+					<widget class="player_form_summary_panel" file="player/tcs/scouting/overview/form" >
+						<record id="object_property" get_property="objt" set_property="objt" />
+					</widget>	
+				</widget>
+			</container>
+		</container>
+
+		<!-- RIGHT -->
+		<container class="horizontal_adaptive_container" default_width="-1" id="riAP" gap="8">
+
+			<record id="default_properties" default_width="-1"  minimum_width="300"/>
+
+			<container class="tcs_box" priority="1">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="vertical_adaptive_container" gap="8">
+
+					<record id="default_properties" default_height="-1"/>
+
+					<widget class="player_positions_indicator_panel" id="ppi1" priority="-1" file="player/tcs/scouting/overview/positions">
+						<record id="object_property" get_property="objt" set_property="objt"/>
+					</widget>
+
+					<!-- POLYGON TAB -->
+					<container class="tcs_tabs" save_session_state="true" save_default_state="true" default_item="AttA">
+
+						<!-- ATTRIBUTE ANALYSIS -->
+						<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/attanal" id="AttA" >
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<translation id="title" translation_id="334971" type="use"  />
+						</widget>
+
+						<!-- DNA -->
+						<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/dna_holder" id="dnaA" >
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<translation id="title" value="DNA" type="use"  />
+						</widget>
+
+						<!-- SET PIECES -->
+						<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/main/selectors/big/setpices_holder" id="pSPe" >
+							<record id="object_property" get_property="objt" set_property="objt"/>
+							<translation id="title" translation_id="468242" type="use" />
+						</widget>
+					</container>
+
+				</container>
+			</container>
+
+			<container class="tcs_box" priority="2">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<container class="vertical_adaptive_container" gap="8" draw_horizontal_dividers="true">
+
+					<!-- PROS AND CONS -->
+					<container default_height="-1" priority="1">
+						<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+						<record id="object_property" get_property="objt" set_property="objt"/>
+
+						<container id="prsC" >
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+
+							<widget class="label" font="title" colour="fg positive" alignment="left,centre_y" size="large" height="20" appearance="">
+								<translation id="text" translation_id="361260" type="use" value="Pros[COMMENT: FR 8316 ]" />
+							</widget>
+
+							<widget class="table" id="tpro" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_container="true" default_sort_column="0">
+								<list id="column_table_properties">
+									<record index="0" sort_ascending="false" />
+								</list>
+							</widget>
+
+							<widget class="text" id="nPro" auto_size="vertical" colour="faded text" multiline="true" hidden="true" />
+						</container>
+
+						<container id="cnsC" >
+							<attachment_group class="vertical_arrange" vertical_alignment="top,extend" vertical_offset="0" horizontal_inset="0" />
+							<widget class="label" font="title" colour="fg negative" alignment="left,centre_y" size="large">
+								<translation id="text" translation_id="361094" type="use" value="Cons[COMMENT: FR 8316 ]" />
+							</widget>
+
+							<widget class="table" id="tcon" layout="-1" inset="0" fixed_size_rows="false" auto_size_rows="true" navigation_container="true" default_sort_column="0">
+								<list id="column_table_properties">
+									<record index="0" sort_ascending="false" />
+								</list>
+							</widget>
+
+							<widget class="text" id="nCon" auto_size="vertical" colour="faded text" multiline="true" hidden="true" />
+						</container>
+
+					</container>
+
+					<!-- SQUAD COMPARISON -->
+					<container default_height="150" priority="2">
+						<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+						<!--Ability list table-->
+						<widget class="table" id="calL" mode="fill_rows,stripe_rows" layout="26,-5,-3,-3">
+							<list id="column_widget_properties">
+								<record indx="0" alignment="left,centre_y" colour="faded text" />
+								<record indx="1" alignment="left,centre_y" />
+								<record indx="2" alignment="left,centre_y" navigation_focus_target="false" />
+								<record indx="3" alignment="left,centre_y" navigation_focus_target="false" />
+							</list>
+
+							<list id="column_table_properties">
+								<record indx="0" sort_disabled="true" left="5" />
+								<record indx="1" sort_disabled="true">
+									<record id="column_heading">
+										<flags id="alignment" value="left,centre_y" />
+										<translation id="text" translation_id="227966" type="use" value="Player" />
+									</record>
+								</record>
+								<record indx="2" sort_disabled="true">
+									<record id="column_heading">
+										<flags id="alignment" value="left,centre_y" />
+										<translation id="text" translation_id="314426" type="use" value="Ability[COMMENT: player popup info panel - scout current ability rating]" />
+										<translation id="hint" translation_id="310135" type="use" value="Current Ability[COMMENT: contract offer screen - comments table]" />
+									</record>
+								</record>
+								<record indx="3" sort_disabled="true">
+									<record id="column_heading">
+										<flags id="alignment" value="left,centre_y" />
+										<translation id="text" translation_id="314427" type="use" value="Potential[COMMENT: player popup info panel - scout potential ability rating]" />
+										<translation id="hint" translation_id="310136" type="use" value="Potential Ability[COMMENT: contract offer screen - comments table]" />
+									</record>
+								</record>
+							</list>
+						</widget>
+
+					</container>
+
+				</container>
+
+			</container>
+		</container>
+	</container>
+</panel>

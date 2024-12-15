@@ -1,0 +1,17 @@
+<panel>
+	<layout class="horizontal_arrange" horizontal_layout="-1"  />
+	<boolean id="should_force_refresh" value="true"/>
+
+		<container class="contrast_box_no_margin" rrep="bg darker">
+			<layout class="vertical_arrange" vertical_layout="30"  />	
+
+				<widget class="edit_box" id="duni" size="10" alignment="top,can_scale,centre_y" auto_size="none" >
+					<record id="object_property">
+						<integer id="get_property" value="duni"/>
+					</record>
+				</widget>
+		
+			<container />
+			
+		</container>
+</panel>

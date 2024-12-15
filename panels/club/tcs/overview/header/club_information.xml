@@ -1,0 +1,111 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<!-- CONTENT -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+		<!-- TOP ROW -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- NICKNAME LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="TCnn" name="true" />
+			</widget>
+
+			<!-- DATE OF BIRTH -->
+			<widget class="text" alignment="right,centre_y"> 
+				<record id="object_property" get_property="TCnn" />
+			</widget>
+		</container>
+
+		<!-- 2ND ROW -->
+		<container class="tcs_table_trans">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- DATE OF BIRTH LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="Cyfn" name="true" />
+			</widget>
+
+			<!-- DATE OF BIRTH -->
+			<widget class="dashed_number_label" alignment="right,centre_y" NumF="0"> 
+				<record id="object_property" get_property="Cyfn" />
+			</widget>
+		</container>
+
+		<!-- 3RD ROW -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- NATION LOGO  -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="Dnat" name="true" />
+			</widget>
+
+			<container >
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+				<record id="default_properties" alignment="right,centre_y"/>
+
+				<!-- NATION -->
+				<widget class="nation_button" id="Dnat">
+					<record id="object_property" get_property="Dnat" />
+				</widget>
+
+				<!-- CITY -->
+				<widget class="city_label" colour="faded text">
+					<record id="object_property" get_property="SctI" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- 4TH ROW -->
+		<container class="tcs_table_trans">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+				<!-- REPUTATION -->
+				<widget class="label" font="label" auto_size="horizontal">
+					<translation id="text" translation_id="227963" type="use" />
+				</widget>
+
+				<!-- AGE AND DATE OF BIRTH -->
+				<container >
+					<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+					<record id="default_properties" alignment="right,centre_y"/>
+
+					<!-- REPUTATION STARS -->
+					<widget class="club_reputation_stars_label">
+						<record id="object_property">
+							<list id="get_properties">
+								<record>
+									<integer id="get_property" value="Csta" />
+									<integer id="set_property" value="valu" />
+								</record>
+								<record>
+									<integer id="get_property" value="Crsc" />
+									<integer id="set_property" value="Crsc" />
+								</record>
+							</list>
+						</record>
+					</widget>
+
+					<!-- REPUTATION LABEL -->
+					<widget class="reputation_label" colour="faded text">
+						<record id="object_property" get_property="Crsc" />
+					</widget>
+				</container>
+			</container>
+
+			<widget class="position_change_button" colour="faded text" width="20">
+				<record id="object_property" get_property="Crpc" />
+			</widget>
+
+		</container>
+	</container>
+</panel>

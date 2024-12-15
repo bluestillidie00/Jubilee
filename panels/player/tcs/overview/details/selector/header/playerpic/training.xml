@@ -1,0 +1,12 @@
+<panel>
+	<attachment_group class="vertical_arrange_autosize" />
+
+	<!-- POSITION -->
+	<widget class="training_rating_label_formatted" alignment="centre,can_scale" auto_size="vertical" wants_mouse_events="false" colour="faded text">
+		<record id="object_property" get_property="Ptrt"/>
+		<string id="format" value="[%fraction#1-3.2]" />
+		<boolean id="dont_format_numeric_grouping" value="true" />
+		<string id="hint_if_no_value" value="-" />
+	</widget>
+
+</panel>

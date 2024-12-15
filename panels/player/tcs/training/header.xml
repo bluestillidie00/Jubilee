@@ -1,0 +1,147 @@
+<!-- A panel showing various bits of information about a player -->
+<panel>
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+	<boolean id="should_force_refresh" value="true"/>
+
+	<container class="horizontal_adaptive_container" gap="8">
+
+		<!-- PLAYER PROFILE -->
+		<container default_width="220" >
+			<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend"/>
+
+			<!-- PLAYER FACE AND LOGO -->
+			<container>
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- LOGO -->
+				<container>
+					<container height="100" width="100">
+						<layout class="stick_to_sides_attachment" alignment="left" inset="12"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="4"/>
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />
+
+						<widget class="object_portrait_picture" id="pclB" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true" wants_mouse_events="true" transparency="0.6">
+							<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+							<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true" />						
+							<record id="object_property" dont_set_hint="true" get_property="Pclb" set_property="objt" />
+						</widget>									
+					</container>
+				</container>
+
+				<!-- PROFILE PICTURE -->
+				<widget class="picture" id="prop" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre_x,bottom" >
+					<layout class="stick_to_sides_attachment" alignment="all" inset="6,36,0,0" />
+					<record id="object_property">
+						<list id="get_properties">
+							<record get_property="fcgn" />
+							<record get_property="Pfke" />
+							<record get_property="prpc" set_property="valu" />
+						</list>
+					</record>
+				</widget>
+
+				<!-- Status Indicators -->
+				<widget class="player_status_all_button" id="psAB" maximised="false" auto_size="vertical" alignment="bottom" gap="-2" max_items_per_row_or_column="6">
+					<layout class="stick_to_sides_attachment" alignment="top,right" inset="0,2"/>
+					<record id="object_property" get_property="Pnfa"/>
+				</widget>
+
+				<!-- TRAINING RATING -->
+				<container height="20" class="tcs_box" appearance="tcs/boxes/main/trans/paper">
+					<attachment_group class="vertical_arrange" vertical_alignment="bottom" />
+
+					<widget class="player_training_performance_panel" id="ptpp" file="none">
+						<record id="object_property" get_property="objt" set_property="objt" />
+						<attachment_group class="horizontal_arrange_vertical_autosize" horizontal_alignment="left" />
+
+						<container width="8" />
+
+						<widget class="property_list_viewer_xml_panel" file="widgets/training rating with change icon" abcd="centre" should_colour="true" entity_layout_id="at06" id="plci"  auto_size="vertical"  alignment="centre_y">
+						</widget>
+					</widget>
+				</container>
+			</container>
+
+			<!-- NAME -->
+			<widget class="person_button" font="title" info_popup_enabled="false" alignment="centre,can_scale" size="xlarge" auto_size="vertical" wants_mouse_events="false">
+				<record id="object_property" get_property="Pnms"/>
+			</widget>
+
+
+			<!-- EXTRA DETAILS -->
+			<container>
+				<attachment_group class="vertical_arrange_autosize" vertical_gap="0"/>
+
+				<widget class="player_extra_details_text" alignment="centre,can_scale" auto_size="vertical" wants_mouse_events="false" colour="faded text">
+					<record id="object_property" get_property="PExD"/>
+				</widget>
+
+				<!-- BUTTONS -->				
+				<container height="40">
+					<attachment_group class="horizontal_arrange" horizontal_alignment="middle" />
+
+					<record id="default_properties" appearance="buttons/primary/normal/button" icon="icons/16px/speech bubble" auto_size="all" colour="fg" icon_colour="fg" />
+
+					<widget class="icon_button"  id="ptbn" click_event="ptev" rrep="bg positive">
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+
+					<widget class="icon_button" id="ctbn" click_event="ctev" rrep="bg negative">
+						<layout class="centre_in_parent_attachment" alignment="vertical" />
+					</widget>
+				</container>
+			</container>
+		</container>
+
+		<!-- BOXES -->
+		<container default_width="-1" class="horizontal_adaptive_container">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="fill" horizontal_gap="8"/>
+
+			<!-- DEFAULT PROPERTIES -->
+			<record id="default_properties" default_width="-1" minimum_width="280">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</record>
+
+			<container class="tcs_box"  priority="1">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- PERSONAL DETAILS -->
+				<widget class="player_personal_details_panel" file="player/tcs/overview/details/selector/header/personal_details" id="pede">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<translation id="title" translation_id="247436" type="use" />
+				</widget>
+			</container>
+
+			<container class="tcs_box"  priority="4">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- PERSONAL DETAILS -->
+				<widget class="player_personal_details_panel" file="player/tcs/overview/details/selector/header/transfer_details" id="tra">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<translation id="title" translation_id="247436" type="use" />
+				</widget>
+			</container>
+
+			<container class="tcs_box"  priority="2">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- PERSONAL DETAILS -->
+				<widget class="client_object_viewer_xml_panel" file="player/tcs/overview/details/selector/header/attanal" id="atall">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<translation id="title" translation_id="247436" type="use" />
+				</widget>
+			</container>
+
+			<container class="tcs_box"  priority="3">
+				<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+				<!-- PERSONAL DETAILS -->
+				<widget class="person_attributes_analyser_panel" file="player/tcs/overview/details/selector/header/dna" id="pdna">
+					<record id="object_property" get_property="objt" set_property="objt"/>
+					<translation id="title" translation_id="247436" type="use" />
+				</widget>
+			</container>
+		</container>
+	</container>
+</panel>

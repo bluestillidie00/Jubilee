@@ -1,0 +1,216 @@
+<panel save_session_state="true">
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+
+	<container>
+		<attachment_group class="horizontal_arrange" horizontal_alignment="right" />
+		<container width="30" class="tcs_header">
+		</container>
+	</container>
+
+
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="8" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<!-- Pitch -->
+			<widget class="pitch_with_player_positions" id="ppip" height="122" vertical="false" pitch_alignment="centre,can_scale" pitch_draw_goals="false" pitch_draw_markings="false" show_position_strength="false" hide_player_positions="true" pitch_show_names="false" pitch_show_names_as_hint="true" pitch_draw_grass="false" pitch_line_colour="text" pitch_touchline_width_percentage="1" pitch_override_icon_size="2" line_width="1.4">
+
+				<!-- Set the icon to use for people on the pitch. The icon will first look for a size that matches the pitch's size, for instance 'pitch/icons/kit/tiny/kit' or 'pitch/icons/kit/medium/kit'.
+          If an icon for the size category is not found it will try the base path: pitch/icons/kit/kit. This means that if you want to use an icon on a pitch that will only ever be one size you 
+          can just provide the base and not worry about the tiny/small/medium/large size categories -->
+				<string id="pitch_kit_icon" value="icons/custom/heat map/circle" />
+			</widget>
+
+			<!-- Position label-->
+			<widget class="text" id="posT" alignment="centre" auto_size="vertical" colour="faded text" />
+
+			<!-- Label -->
+			<widget id="r+dl" class="text" font="title" auto_size="vertical" colour="accent">
+				<translation id="text" translation_id="363721" type="use" value="Role and Duty[COMMENT: FR 8989 - title for a panel allowing choosing of the role and duty for a player]" />
+			</widget>
+
+			<container>
+				<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+
+				<!-- Info labels for when the data isn't available-->
+				<container id="inFC">
+					<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="4" />
+
+					<widget class="text" id="nrLb" auto_size="vertical" hidden="true">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+						<translation id="text" translation_id="383562" type="use" value="No suitable best roles for this position[COMMENT: FR 10661; player overview positions indicator; string displayed when the player is not good enough in a position to have a 'best role' for it]" />
+					</widget>
+					<widget class="text" id="arbs" auto_size="vertical" hidden="true">
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" />
+						<translation id="text" translation_id="447600" type="use" value="This player is being scouted by [%person#1] and the report will be available shortly.[COMMENT:scout report, scouting in progress]" />
+					</widget>
+					<widget class="text" id="pool" auto_size="all" hidden="true">
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+						<translation id="text" translation_id="342085" type="use" value="Scouting In Progress[COMMENT: disabled menu item when a player is already being scouted]" />
+					</widget>
+					<widget class="button" id="scPb" click_event="sctc" auto_size="all" height="30" hidden="true">
+						<translation id="text" translation_id="243421" type="use" value="Scout Player" />
+						<layout class="centre_in_parent_attachment" alignment="horizontal" />
+					</widget>
+				</container>
+
+				<!-- Best roles for selected position -->
+				<widget class="table" id="Rcon" layout="80, 18, -1, 100" auto_size_rows="false" row_height="28" row_spacing="2" column_spacing="4" mode="select_rows" select_event="sdst" sort_disabled="true">
+					<translation id="hint" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+					<record id="default_properties">
+						<translation id="hint" translation_id="330016" type="use" value="Highlight key attributes for role[COMMENT: option allowing for viewing the key attributes needed to play in a certain role]" />
+					</record>
+
+					<list id="column_widget_properties">
+						<record index="1" navigation_focus_target="true" />
+						<record index="2" navigation_focus_target="true" />
+					</list>
+
+					<widget class="stars_range_strip" id="roS1" row="0" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt1" row="0" col="1" />
+					<widget class="popup_button" id="dut1" row="0" col="2" appearance="" column_span="2" />
+
+					<widget class="stars_range_strip" id="roS2" row="1" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt2" row="1" col="1" />
+					<widget class="popup_button" id="dut2" row="1" col="2" appearance="" column_span="2"/>
+
+					<widget class="stars_range_strip" id="roS3" row="2" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt3" row="2" col="1" />
+					<widget class="popup_button" id="dut3" row="2" col="2" appearance="" column_span="2"/>
+
+					<widget class="stars_range_strip" id="roS4" row="3" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt4" row="3" col="1" />
+					<widget class="popup_button" id="dut4" row="3" col="2" appearance="" column_span="2"/>
+
+					<widget class="stars_range_strip" id="roS5" row="4" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt5" row="4" col="1" />
+					<widget class="popup_button" id="dut5" row="4" col="2" appearance="" column_span="2"/>
+
+					<widget class="stars_range_strip" id="roS6" row="5" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt6" row="5" col="1" />
+					<widget class="popup_button" id="dut6" row="5" col="2" appearance="" column_span="2"/>
+
+					<widget class="stars_range_strip" id="roS7" row="6" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt7" row="6" col="1" />
+					<widget class="popup_button" id="dut7" row="6" col="2" appearance="" column_span="2"/>
+
+					<widget class="stars_range_strip" id="roS8" row="7" col="0" image_alignment="centre" />
+					<widget class="info_icon_hint_text" id="hnt8" row="7" col="1" />
+					<widget class="popup_button" id="dut8" row="7" col="2" appearance="" column_span="2"/>
+				</widget>
+
+			</container>
+		</container>
+
+		<container class="main_subtle_box" height="44" >
+<layout class="horizontal_arrange" horizontal_layout="-1,2.-1"  />
+
+			<!-- LEFT FOOT -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<!-- LEFT FOOT -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="-2"/>
+
+					<record id="default_properties" alignment="right,centre_y" auto_size="vertical" />
+
+					<!-- FOOTEDNESS -->
+					<widget class="footedness_label" style="semi_bold" >
+						<record id="object_property" get_property="PlfG"/>
+					</widget>
+
+					<!-- LABEL -->
+					<widget class="label" alignment="right,centre_y" font="label">
+						<record id="object_property" get_property="PlfG" name="true"/>
+					</widget>
+				</container>
+
+				<!-- LEFT FOOT ICON -->
+				<widget class="value_based_picture" width="24" >
+					<list id="value_list">
+						<record value="0" file="tcs/icons/attributes/circles/0" />
+						<record value="1" file="tcs/icons/attributes/circles/10" />
+						<record value="2" file="tcs/icons/attributes/circles/10" />
+						<record value="3" file="tcs/icons/attributes/circles/20" />
+						<record value="4" file="tcs/icons/attributes/circles/20" />
+						<record value="5" file="tcs/icons/attributes/circles/30" />
+						<record value="6" file="tcs/icons/attributes/circles/30" />
+						<record value="7" file="tcs/icons/attributes/circles/40" />
+						<record value="8" file="tcs/icons/attributes/circles/40" />
+						<record value="9" file="tcs/icons/attributes/circles/50" />
+						<record value="10" file="tcs/icons/attributes/circles/50" />
+						<record value="11" file="tcs/icons/attributes/circles/60" />
+						<record value="12" file="tcs/icons/attributes/circles/60" />
+						<record value="13" file="tcs/icons/attributes/circles/70" />
+						<record value="14" file="tcs/icons/attributes/circles/70" />
+						<record value="15" file="tcs/icons/attributes/circles/80" />
+						<record value="16" file="tcs/icons/attributes/circles/80" />
+						<record value="17" file="tcs/icons/attributes/circles/90" />
+						<record value="18" file="tcs/icons/attributes/circles/90" />
+						<record value="19" file="tcs/icons/attributes/circles/100" />
+						<record value="20" file="tcs/icons/attributes/circles/100" />
+					</list>
+					<record id="object_property" get_property="PlfG"/>
+				</widget>
+			</container>
+			
+			<widget class="vertical_subtle_divider" width="2"/>
+			
+			<!-- RIGHT FOOT -->
+			<container>
+				<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+				
+				<!-- RIGHT FOOT ICON -->
+				<widget class="value_based_picture" width="24" >
+					<list id="value_list">
+						<record value="0" file="tcs/icons/attributes/circles/0" />
+						<record value="1" file="tcs/icons/attributes/circles/10" />
+						<record value="2" file="tcs/icons/attributes/circles/10" />
+						<record value="3" file="tcs/icons/attributes/circles/20" />
+						<record value="4" file="tcs/icons/attributes/circles/20" />
+						<record value="5" file="tcs/icons/attributes/circles/30" />
+						<record value="6" file="tcs/icons/attributes/circles/30" />
+						<record value="7" file="tcs/icons/attributes/circles/40" />
+						<record value="8" file="tcs/icons/attributes/circles/40" />
+						<record value="9" file="tcs/icons/attributes/circles/50" />
+						<record value="10" file="tcs/icons/attributes/circles/50" />
+						<record value="11" file="tcs/icons/attributes/circles/60" />
+						<record value="12" file="tcs/icons/attributes/circles/60" />
+						<record value="13" file="tcs/icons/attributes/circles/70" />
+						<record value="14" file="tcs/icons/attributes/circles/70" />
+						<record value="15" file="tcs/icons/attributes/circles/80" />
+						<record value="16" file="tcs/icons/attributes/circles/80" />
+						<record value="17" file="tcs/icons/attributes/circles/90" />
+						<record value="18" file="tcs/icons/attributes/circles/90" />
+						<record value="19" file="tcs/icons/attributes/circles/100" />
+						<record value="20" file="tcs/icons/attributes/circles/100" />
+					</list>
+					<record id="object_property" get_property="PrfG"/>
+				</widget>
+
+				<!-- LEFT FOOT -->
+				<container>
+					<attachment_group class="vertical_arrange" vertical_alignment="middle" vertical_gap="-2"/>
+
+					<record id="default_properties" alignment="left,centre_y" auto_size="vertical" />
+
+					<!-- FOOTEDNESS -->
+					<widget class="footedness_label" style="semi_bold" >
+					<record id="object_property" get_property="PrfG"/>
+				</widget>
+
+				<!-- LABEL -->
+				<widget class="label" colour="faded text" font="label">
+					<record id="object_property" get_property="PrfG" name="true"/>
+				</widget>
+				</container>
+			</container>
+
+		</container>
+	</container>
+</panel>

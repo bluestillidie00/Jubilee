@@ -1,0 +1,8 @@
+<panel save_session_state="true" >
+	<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+	<widget class="bookmarks_menu_panel" id="book" >
+		<record id="object_property" get_property="objt" set_property="objt"/>
+	</widget>
+
+</panel>

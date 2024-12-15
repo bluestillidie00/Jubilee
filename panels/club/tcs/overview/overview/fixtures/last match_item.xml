@@ -1,0 +1,49 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container>
+		<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+		<container>
+			<layout class="stick_to_sides_attachment" alignment="all" inset="-70" apply_to_children="true" transparency="0.4"/>
+			<widget class="stadium_picture" id="STAp" image_alignment="centre_ycentre_x" keep_aspect_ratio="true">
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+
+			<container class="tcs_box" appearance="tcs/backgrounds/overlay/100" rrep="bg lighter" transparency="0.64"/>
+		</container>
+
+		<container class="plain_box" appearance="tcs/ro" rrep="bg lighter"/>
+
+		<container class="tcs_box" >
+			<layout class="vertical_arrange" vertical_alignment="top,extend"/>
+
+			<!-- TCS HEADER -->
+			<widget class="tcs_header">
+				<translation id="text" type="use" translation_id="316719" />
+			</widget>
+
+			<container height="100" >
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+				<widget class="fixture_full_result_text" id="FxFR" format="[%scoreline#1-result_h_a_result]" style="bold" size="24" alignment="centre" reverse_teams="false" navigation_focus_target="true">
+					<record id="object_property" get_property="FxFR" />
+				</widget>
+
+				<widget class="client_object_viewer_xml_panel" id="badg" file="team/team upcoming fixture badges no versus" >
+					<record id="object_property" get_property="objt" set_property="objt" />
+				</widget>
+				
+				<container>
+				<attachment_group class="vertical_arrange" vertical_alignment="bottom" />
+						<widget class="object_portrait_picture" id="fxCo" scale_picture="true" height="40" >
+									<boolean id="keep_aspect_ratio" value="true" />
+									<flags id="image_alignment" value="centre" />
+									<record id="object_property" get_property="fxCo" set_property="objt" />
+								</widget>
+			</container>
+			</container>
+
+		</container>
+	</container>
+
+</panel>

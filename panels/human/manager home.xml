@@ -1,0 +1,66 @@
+<panel>
+	<layout class="horizontal_arrange" horizontal_layout="350,-1" horizontal_gap="8" />
+
+	<!-- LEFT SIDE -->
+	<container class="vertical_adaptive_container" gap="8">
+
+		<!-- MANAGER OVERVIEW PULLED THROUGH UPCOMING FIXTURE PANEL -->
+		<widget class="manager_upcoming_fixture_panel" id="tufp" file="human/custom/home/profile" default_height="-1"/>
+
+		<!-- SELECTOR 
+		<container class="tcs_box" default_height="-1" >
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+			<container class="client_object_viewer_selector_panel" id="cosL" file="human/manager home selector panel" >
+				<integer id="default_for_club_teams" value="tlta"/>
+				<integer id="default_for_international_teams" value="pssu"/>
+				<integer id="default_for_international_youth_teams" value="pssu"/>
+				<integer id="default_for_no_team" value="mnew"/>
+
+				<integer id="default_for_pre_season" value="MedC"/>
+				<integer id="default_for_off_season" value="fsws"/>
+				<integer id="default_for_transfer_window" value="fsws"/>
+
+				<integer id="scenario_job_insecure" value="bcsn"/>
+			</container>
+		</container> -->
+	</container>
+
+	<!-- ALL THE TABS -->
+	<container class="tcs_tabs" save_session_state="true" save_default_state="true">
+		<record id="object_property" get_property="objt" set_property="objt"/>
+
+		<container class="inbox_panel" id="Tfyp" file="human/custom/home/fyp">
+			<translation id="title" type="use" value="For You" />
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</container>
+
+		<!-- SQUAD DEPTH -->
+		<container id="sqdh">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" type="use" translation_id="316743" />
+			<widget class="client_object_viewer_selector_panel" id="sqdh" file="human/custom/home/dummy/depth" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+		<!-- FINANCES -->
+		<container id="fina">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" type="use" value="Finances" />
+			<widget class="client_object_viewer_selector_panel" id="sqdh" file="human/custom/home/dummy/finance" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+		<!-- FINANCES -->
+		<container id="stat">
+			<layout class="stick_to_sides_attachment" apply_to_children="true"/>
+			<translation id="title" type="use" value="Stats" />
+			<widget class="client_object_viewer_selector_panel" id="stat" file="human/custom/home/dummy/stat" >
+				<record id="object_property" get_property="objt" set_property="objt"/>
+			</widget>
+		</container>
+
+	</container>
+</panel>

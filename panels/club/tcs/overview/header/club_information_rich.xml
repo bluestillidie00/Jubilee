@@ -1,0 +1,84 @@
+<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+	<!-- CONTENT -->
+	<container>
+		<attachment_group class="vertical_arrange" vertical_alignment="fill" />
+
+		<!-- TOP ROW -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- NICKNAME LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="TCnn" name="true" />
+			</widget>
+
+			<!-- DATE OF BIRTH -->
+			<widget class="text" alignment="right,centre_y"> 
+				<record id="object_property" get_property="TCnn" />
+			</widget>
+		</container>
+
+		<!-- 2ND ROW -->
+		<container class="tcs_table_trans">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- DATE OF BIRTH LABEL -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="Cyfn" name="true" />
+			</widget>
+
+			<!-- DATE OF BIRTH -->
+			<widget class="dashed_number_label" alignment="right,centre_y" NumF="0"> 
+				<record id="object_property" get_property="Cyfn" />
+			</widget>
+		</container>
+
+		<!-- 3RD ROW -->
+		<container class="tcs_table">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="left,extend" />
+
+			<!-- NATION LOGO  -->
+			<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="Dnat" name="true" />
+			</widget>
+
+			<container >
+				<attachment_group class="vertical_arrange" vertical_alignment="fill" vertical_gap="-2" />
+
+				<record id="default_properties" alignment="right,centre_y"/>
+
+				<!-- NATION -->
+				<widget class="nation_button" id="Dnat">
+					<record id="object_property" get_property="Dnat" />
+				</widget>
+
+				<!-- CITY -->
+				<widget class="city_label" colour="faded text">
+					<record id="object_property" get_property="SctI" />
+				</widget>
+			</container>
+		</container>
+
+		<!-- 4TH ROW -->
+		<container class="tcs_table_trans">
+			<attachment_group class="horizontal_arrange" horizontal_alignment="right,extend" />
+
+				<!-- REPUTATION -->
+				<widget class="label" font="label" auto_size="horizontal">
+				<record id="object_property" get_property="Chsd" name="true" />
+				</widget>
+				
+				<widget class="formatted_label">
+								<record id="object_property" get_property="Chsd"/>
+								<list id="format">
+									<record value="0" format="None"/>
+									<record value="1" format="Foreground"/>
+									<record value="2" format="Background"/>
+									<record value="3" format="Underwriter"/>
+								</list>
+							</widget>
+		</container>
+	</container>
+</panel>

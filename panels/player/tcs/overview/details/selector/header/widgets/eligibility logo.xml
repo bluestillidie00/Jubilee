@@ -1,0 +1,33 @@
+<!-- A panel showing a nation or club logo and it's name below. Designed to be used with a CLIENT_OBJECT_VIEWER_XML_PANEL parent.-->
+<panel>
+    <attachment_group class="vertical_arrange" vertical_alignment="bottom,extend" />
+
+<!-- LOGO -->
+    <container class="main_box">
+        <layout class="stick_to_sides_attachment" apply_to_children="true"/>
+
+        <widget class="object_portrait_picture" id="mbdg" image_alignment="centre" scale_picture="true" keep_aspect_ratio="true">
+            <record id="object_property">
+                <integer id="get_property" value="objt" />
+                <integer id="set_property" value="objt" />
+            </record>
+        </widget>
+    </container>
+
+<!-- NATION NAME -->
+    <widget class="nation_button" id="natb" auto_size="vertical" alignment="top,centre_x" red_replacement="primary" style="bold" colour="bubble" icon_enabled="false">
+        <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="valu" />
+        </record>
+    </widget>
+    
+    <!-- CLUB NAME -->
+    <widget class="club_button" id="clbb" auto_size="vertical" alignment="top,centre_x" red_replacement="primary" style="bold" colour="bubble" icon_enabled="false">
+        <record id="object_property">
+            <integer id="get_property" value="objt" />
+            <integer id="set_property" value="valu" />
+        </record>
+    </widget>
+
+</panel>

@@ -1,0 +1,36 @@
+﻿<panel height="20">
+	<layout class="arrange_horizontal_attachment" alignment="left,extend" offset="0" gap="0"/>
+	<layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="0"/>
+	<layout class="stick_to_sides_attachment" alignment="vertical" inset="2" apply_to_children="true"/>
+
+	<container class="main_box_no_margin" width="40" bkcl="tcs_accent">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" apply_to_children="true"/>
+
+		<widget class="label" id="bsnm" font="tcstv" colour="white" size="normal" alignment="centre">
+			<animation class="translate_animation" trigger_id="hidden" trigger_value="false" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen">
+				<list id="storyboard">
+					<record id="stop" interval="0" value="0,0.0"/>
+					<record id="stop" interval="1" value="0,-0.4"/>
+					<record id="stop" interval="1.3" value="0,0"/>
+				</list>
+			</animation>
+		</widget>
+    
+		<!-- FACE -->
+		<widget class="object_portrait_picture" id="pict" scale_picture="true" keep_aspect_ratio="true" image_alignment="centre">
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+
+	</container>
+	
+	<container width="2"/>
+
+	<container class="main_box_no_margin">
+		<layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="0"/>
+		<layout class="fit_children_attachment" alignment="horizontal" offset="0" gap="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true"/>
+      
+		<widget class="text" id="name" format="[%person#1-bold_surname]" font="tcstv" colour="fg" size="normal" alignment="left,centre_y,can_scale" multiline="false" auto_size="horizontal"/>
+	</container>
+
+</panel>

@@ -1,0 +1,20 @@
+﻿<panel>
+	<attachment_group class="vertical_arrange" vertical_alignment="top,extend" />
+
+	<container class="tcs_box" appearance="tcs/boxes/main/trans/paper">
+		<layout class="arrange_horizontal_attachment" layout="-15, -8" offset="0" />
+		<layout class="stick_to_sides_attachment" alignment="vertical" apply_to_children="true" inset="0" />
+
+		<container>
+			<layout class="arrange_vertical_attachment" layout="-1, -1" offset="0" />
+			<layout class="stick_to_sides_attachment" alignment="horizontal" apply_to_children="true" inset="0" />
+
+			<widget class="team_goal_analysis_summary_panel" id="tgas"/>
+
+			<widget class="team_tactic_analysis_summary_panel" id="ttas" file="team/team tactic analysis summary panel with heading"/>
+
+		</container>
+
+	</container>
+
+</panel>

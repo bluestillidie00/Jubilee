@@ -1,0 +1,3 @@
+Credits:
+Rensie (Rounded polygons)
+@Sas/@Tyburn_/@_Ben_ - Various bits of code for team squad panel

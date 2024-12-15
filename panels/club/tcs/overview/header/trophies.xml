@@ -1,0 +1,34 @@
+<panel>
+    <layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0" />
+    
+    	<!-- Ticker tape coloured to teams colours -->
+	<container class="client_object_viewer_xml_panel">
+		<layout class="stick_to_sides_attachment" alignment="all" apply_to_children="true" inset="0"/>
+
+		<!-- PROP_TEAM -->
+		<record id="object_property" get_property="Ttea" set_property="objt"/>
+
+		<widget class="picture" file="photos/dynamic/ticker trophy/ticker" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false" transparency="0.3" rrep="primary" brep="secondary">
+			<record id="object_property">
+				<list id="get_properties">
+					<!-- PROP_TEAM_FOREGROUND_COLOUR1 -->
+					<record get_property="Tfc1" set_property="rrep"/>
+					<!-- PROP_TEAM_BACKGROUND_COLOUR1 -->
+					<record get_property="Tbc1" set_property="brep"/>
+				</list>
+			</record>
+		</widget>
+	</container>
+
+	<!-- ticker shading -->
+	<widget class="picture" id="bgim" file="photos/dynamic/ticker trophy/ticker shading" image_alignment="centre" scale_picture="true" keep_aspect_ratio="false" transparency="0.3"/>
+
+    
+	    <container class="scrolling_box" fit_content_horizontal="true" fit_content_vertical="false">
+        <container class="container" id="hnrs">
+            <layout class="arrange_horizontal_attachment" alignment="left" offset="0" gap="8"/>
+            <layout class="fit_children_attachment" alignment="horizontal,fill" offset="0" gap="8"/>
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" apply_to_children="true" />
+        </container>
+    </container>
+</panel>

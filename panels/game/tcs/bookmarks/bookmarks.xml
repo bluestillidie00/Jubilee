@@ -1,0 +1,22 @@
+<panel bkcl="red">
+	<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="80"/>
+	<container class="tcs_box">.	
+		<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>
+		<real id="delay_modal_close" value="0.5"/>
+		<animation class="translate_animation" trigger_id="hidden" trigger_value="false" start_value="0,-1" end_value="0,0" duration="0.5" end_mode="hold_auto_reverse_hold" tween="ease_out" coord_mode="relative_to_screen"/>
+		<widget class="client_object_viewer_xml_panel" file="generic/sas/bookmenu">
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+			<record id="object_property" get_property="objt" set_property="objt"/>
+		</widget>
+		<widget class="button" text="" appearance="icons/26px/cross">
+			<layout class="stick_to_sides_attachment" alignment="top,right" inset="10"/>
+			<event id="click_event" event_id="wev0"/>
+			<attachment class="event_relay_attachment" event_id="wev0">
+				<record id="action_event">
+					<flags id="event_id" value="hide"/>
+					<flags id="event_target" value="tcbm"/>
+				</record>
+			</attachment>
+		</widget>
+	</container>
+</panel>
